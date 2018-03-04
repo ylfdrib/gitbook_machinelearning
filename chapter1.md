@@ -1,8 +1,7 @@
-```
-# 线性模型
-```
 
-```
+# 线性模型
+
+
 ## 大纲
 - [线性模型](#linear_model)
 - [回归与分类](#rgr_cls)
@@ -39,13 +38,13 @@ y是定性变量-->分类， 常用逻辑回归
  ###  $$ p(X) = \frac{e^{w_0 + w^TX }}{1+e^{w_0 + w^TX} }$$
 - 极大似然  
   给定X,W时，$$ Y \subseteq{\{0,1\}} $$  
-      
+
   $$ p(Y|X,W) \sim Bernoulli(\varphi) $$
-  
+
   假设所有的Y独立同分布， 则联合概率密度：
   #### L(w) = $$\prod_{i}^{n} p(x)^y \cdot (1-p(x))^{1 - y}$$
   #### max L(w) 
-  
+
 ### 正则化与先验 <span id="rgl_pri"></span>
 
 - 似然函数联想到先验和后验
@@ -63,14 +62,8 @@ y是定性变量-->分类， 常用逻辑回归
 
 ### 广义线性模型<span id="glm"></span>
 - y与x之间的非线性关系
-  $$ g(y) = \varphi(X) + \epsilon  $$ 
+  $$ g(y) = \varphi(X) + \epsilon  $$
 
-
-
-  
-  
-
-```
 
 
 
