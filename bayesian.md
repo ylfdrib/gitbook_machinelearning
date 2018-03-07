@@ -29,8 +29,10 @@ $$
 - Prediction: $$ \mathcal{p(\hat y | x^*, \theta^*)} $$
 
 ###Bayesian estimation
- 
- 
+- Learning: Computing the posterior $$ \mathcal{p(\theta | D)} $$
+- Prediction: $$\mathcal{p(\hat y | x^*, D) = \int_\theta p(\hat y | x^*, \theta)p(\theta|D)d\theta}$$
+
+
  
  
  
