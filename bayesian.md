@@ -14,29 +14,21 @@ $$
     \mathcal{p(D) = \int p(D|w)p(w)\ dw}
 $$
 
-##Notations
+##MLE vs MAP vs Bayesian
 
 - Training Data: $$ \mathcal{D = \{(x_1, y_1),...,(x_n, y_n)\}} $$
 - Model parameter: $$ \mathcal{\theta} $$
 - New Data: $$ x^* $$
 
-##MLE (Maximum Likelihood Estimation)
+###MLE (Maximum Likelihood Estimation)
 - Learning: Finding $$\mathcal{\theta^*}$$ such that maximize $$ \mathcal{p(D|\theta)} $$
-
 - Prediction: $$ \mathcal{p(\hat y | x^*, \theta^*)} $$
 
+###MAP (Maximum A Posteri estimation)
+- Learning: Finding $$\mathcal{\theta^*}$$ such that maximize $$ \mathcal{p(\theta | D)} $$
+- Prediction: $$ \mathcal{p(\hat y | x^*, \theta^*)} $$
 
-
-
-
-
-
-##MAP
-
-
-
-
-##Bayesian
+###Bayesian estimation
  
  
  
