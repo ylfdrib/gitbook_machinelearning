@@ -21,5 +21,15 @@ $$
     \theta_1x_1 + \theta_2x_2 \in C
 $$
 
+##凸函数
+函数$$f:R^n \to R$$ 被称为**凸函数**，
+即 如果dom $$f$$ 是凸集，且 $$\forall x_1,x_2 \in dom f, \forall 0 \leqslant \theta \leqslant 1$$，有
+$$
+f(\theta x_1 + (1-\theta) x_2) \leqslant \theta f(x_1) + (1-\theta)f(x_2)
+$$
+
+
+
+
         
     
