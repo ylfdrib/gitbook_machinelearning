@@ -33,8 +33,12 @@ $$
 - Prediction: $$\mathcal{p(\hat y | x^*, D) = \int_\theta p(\hat y | x^*, \theta)p(\theta|D)d\theta}$$
 
 
- 
- 
+
+###线性回归
+输出是输入变量的线性组合，即
+$$
+    y(x,w)=w_0 + w_1x_1 + ... + w_Dx_D
+$$ 
  
  
  
