@@ -20,19 +20,21 @@ $$
 - Model parameter: $$ \mathcal{\theta} $$
 - New Data: $$ x^* $$
 
-###MLE (Maximum Likelihood Estimation)
-- Learning: Finding $$\mathcal{\theta^*}$$ such that maximize $$ \mathcal{p(D|\theta)} $$
+###1. MLE (Maximum Likelihood Estimation)
+- Learning: Finding $$\mathcal{\theta^*}$$ such that maximize $$ \mathcal{p(D|\theta)} $$，
+    即$$\theta^*_{ML}$$
 - Prediction: $$ \mathcal{p(\hat y | x^*, \theta^*)} $$
 
-###MAP (Maximum A Posteri estimation)
+###2. MAP (Maximum A Posteri estimation)
 - Learning: Finding $$\mathcal{\theta^*}$$ such that maximize $$ \mathcal{p(\theta | D)} $$
 - Prediction: $$ \mathcal{p(\hat y | x^*, \theta^*)} $$
 
-###Bayesian estimation
+###3. Bayesian estimation
 - Learning: Computing the posterior $$ \mathcal{p(\theta | D)} $$
 - Prediction: $$\mathcal{p(\hat y | x^*, D) = \int_\theta p(\hat y | x^*, \theta)p(\theta|D)d\theta}$$
 
-
+###4. 区别
+- MLE,MAP的目标是找到"特定"的最优解 $$ \theta^* $$，而Bayesian考虑了所有的参数，即参数 $$\theta$$ 的整个分布。
 
 ###线性回归
 输出是输入变量的线性组合，即
@@ -43,7 +45,7 @@ $$
  
 
  ###参考 
- 李文哲分享[http://www.chinahadoop.cn/course/586/learn#lesson/11556]
+ 1. 李文哲分享 [链接](http://www.chinahadoop.cn/course/586/learn#lesson/11556)
  
  
  
