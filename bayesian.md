@@ -23,14 +23,18 @@ $$
 ###1. MLE (Maximum Likelihood Estimation)
 - Learning: Finding $$\mathcal{\theta^*}$$ such that maximize $$ \mathcal{p(D|\theta)} $$,  
 
-    即$$\theta^*_{MLE}=argmax_{\theta}\mathcal{p(D|\theta)}$$ ，一般的求解方法是 令 $$$$
+    即$$\theta^*_{MLE}=argmax_{\theta}\mathcal{p(D|\theta)}$$ ，一般的求解方法是令 $$\mathcal{\frac{\partial p(D|\theta)}{\partial \theta} = 0}$$.
 - Prediction: $$ \mathcal{p(\hat y | x^*, \theta^*)} $$
 - 缺点
     - 缺少先验
     - 容易过拟合
 
 ###2. MAP (Maximum A Posteri estimation)
-- Learning: Finding $$\mathcal{\theta^*}$$ such that maximize $$ \mathcal{p(\theta | D)} $$
+- Learning: Finding $$\mathcal{\theta^*}$$ such that maximize $$ \mathcal{p(\theta | D)} $$,  
+    
+    即$$\theta^*_{MAP} = \mathcal{argmax_{\theta}p(\theta|D)=argmax_{\theta}p(D|\theta)p(\theta) = argmax_{\theta}log p(D|\theta) + log{ }p(\theta) }$$
+                
+                
 - Prediction: $$ \mathcal{p(\hat y | x^*, \theta^*)} $$
 
 ###3. Bayesian estimation
