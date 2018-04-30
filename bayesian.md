@@ -21,9 +21,13 @@ $$
 - New Data: $$ x^* $$
 
 ###1. MLE (Maximum Likelihood Estimation)
-- Learning: Finding $$\mathcal{\theta^*}$$ such that maximize $$ \mathcal{p(D|\theta)} $$，
-    即$$\theta^*_{ML}$$
+- Learning: Finding $$\mathcal{\theta^*}$$ such that maximize $$ \mathcal{p(D|\theta)} $$,  
+
+    即$$\theta^*_{MLE}=argmax_{\theta}\mathcal{p(D|\theta)}$$ ，一般的求解方法是 令 $$$$
 - Prediction: $$ \mathcal{p(\hat y | x^*, \theta^*)} $$
+- 缺点
+    - 缺少先验
+    - 容易过拟合
 
 ###2. MAP (Maximum A Posteri estimation)
 - Learning: Finding $$\mathcal{\theta^*}$$ such that maximize $$ \mathcal{p(\theta | D)} $$
