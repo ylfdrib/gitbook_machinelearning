@@ -32,7 +32,7 @@ $$
 ###2. MAP (Maximum A Posteri estimation)
 - Learning: Finding $$\mathcal{\theta^*}$$ such that maximize $$ \mathcal{p(\theta | D)} $$,  
     
-    即$$\theta^*_{MAP} = \mathcal{argmax_{\theta}p(\theta|D)=argmax_{\theta}p(D|\theta)p(\theta) = argmax_{\theta}log p(D|\theta) + log{ }p(\theta) }$$
+    即$$\theta^*_{MAP} = \mathcal{argmax_{\theta}p(\theta|D)=argmax_{\theta}p(D|\theta)p(\theta) = argmax_{\theta}log p(D|\theta) + logp(\theta) }$$
                 
                 
 - Prediction: $$ \mathcal{p(\hat y | x^*, \theta^*)} $$
