@@ -105,7 +105,23 @@ H(P,Q)=-\sum_{}P(x)logQ(x) \\
 KL(P\|Q) = H(P,Q) - H(P)
 $$
 
-在机器学习中，我们需要评估label和predicts之间的差距，使用KL散度刚刚好，即DKL(y||ŷ )DKL(y||y^)，由于KL散度中的前一部分−H(y)−H(y)不变，故在优化过程中，只需要关注交叉熵就可以了。所以一般在机器学习中直接用用交叉熵做loss，评估模型。
+在机器学习中，我们需要评估label和predicts之间的差距，使用KL散度刚刚好，即$$KL_D(y||\hat{y} )$$，由于KL散度中的后一部分-H(y)不变，故在优化过程中，只需要关注交叉熵就可以了。所以一般在机器学习中直接用用交叉熵做loss，评估模型。
+
+在二分类(n=2)问题上，单个样本的loss
+$$
+loss=-\sum_{i=1}^{n} y_{i} \log (\hat{y}_{i}) \\
+loss=ylog(\hat{y}) + (1-y)log(1-\hat{y})
+$$
+全部样本的平均loss
+$$
+loss=-\frac{1}{m} \sum_{j=1}^{m} \sum_{i=1}^{n} y_{j i} \log \left(\hat{y}_{j i}\right) \\
+loss=-\frac{1}{m}\sum_{j=1}^{m}(ylog(\hat{y}) + (1-y)log(1-\hat{y})
+)
+$$
+其中，m为样本量
+
+
+
 
 
     
