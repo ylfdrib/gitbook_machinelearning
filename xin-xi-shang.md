@@ -97,4 +97,15 @@ $$
 1. 非负性，$$KL(P \| Q) \geq 0$$，且在$$P \equiv Q$$时取0.
 2. 不对称性，$$KL(p, q) \neq KL(q, p)$$
 
+#交叉熵
+cross entropy, 
+
+$$
+H(P,Q)=-\sum_{}P(x)logQ(x) \\
+KL(P\|Q) = H(P,Q) - H(P)
+$$
+
+在机器学习中，我们需要评估label和predicts之间的差距，使用KL散度刚刚好，即DKL(y||ŷ )DKL(y||y^)，由于KL散度中的前一部分−H(y)−H(y)不变，故在优化过程中，只需要关注交叉熵就可以了。所以一般在机器学习中直接用用交叉熵做loss，评估模型。
+
+
     
