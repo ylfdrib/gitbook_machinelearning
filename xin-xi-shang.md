@@ -89,7 +89,7 @@ $$
 #相对熵
 relative entropy, 也被称为KL散度(Kullback-Leibler divergence, KLD),或者信息散度(information divergence),是两个概率分布间差异的非对称度量。在信息论中，相对熵等价于两个概率分布信息熵的差值。
 $$
-KL(P||Q)=\sum_{}P(x)log\frac{P(x)}{Q(x)}
+KL(P\|Q)=\sum_{}P(x)log\frac{P(x)}{Q(x)}
 $$
 在信息理论中，相对熵是用来度量使用基于Q的编码来编码来自P的样本平均所需的额外的比特个数。典型情况下，P表示数据的真实分布，Q表示数据的理论分布，模型分布，或P的近似分布。
 
