@@ -63,6 +63,12 @@ $$
 Gini(D) = 1-\sum_{k=1}^{K}(\frac{|C_k|}{|D|})
 $$
 
+CART是个二叉树，基于特征A划分样本集合D之后的基尼指数：
+$$
+Gini(D,A)=\frac{|D_1|}{|D|}Gini(D_1) + \frac{|D_2|}{|D|}Gini(D_2)
+$$
+
+
 
 
 参考[决策树](https://www.cnblogs.com/muzixi/p/6566803.html)
