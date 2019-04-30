@@ -1,7 +1,7 @@
 #梯度下降法（Gradient Descent）
 梯度下降法，属于一阶优化算法，
 $$
-\theta_{n} := \theta_{n-1} - \eta L^{\alpha}(\theta_{n-1})
+\theta_{n} := \theta_{n-1} - \eta L^{\prime}(\theta_{n-1})
 $$
 其中，$$\alpha$$是梯度每次逼近的步长，‘-’负号表示负梯度方向，L是损失函数。
 
@@ -41,8 +41,9 @@ $$
 $$
 一般的，因为$$\left\|\nabla f\left(\theta_{0}\right)\right\|$$ 是标量，可以并入因子$$\eta$$中，化简为：
 $$
-\theta=\theta_{0}-\eta^{\prime} \nabla f\left(\theta_{0}\right)
+\theta=\theta_{0}-\eta^\prime\nabla f\left(\theta_{0}\right)
 $$
+其中，$$\eta^\prime = \frac{\eta}{\|\nabla f(\theta_0) \|}$$
 
 #牛顿法
 
