@@ -61,6 +61,30 @@ $$
 H=\nabla^{2} f=\left[ \begin{array}{cccc}{\frac{\partial^{2} f}{\partial x_{1}^{2}}} & {\frac{\partial^{2} f}{\partial x_{1} \partial x_{2}}} & {\cdots} & {\frac{\partial^{2} f}{\partial x_{1} \partial x_{N}}} \\ {\frac{\partial^{2} f}{\partial x_{2} \partial x_{1}}} & {\frac{\partial^{2} f}{\partial x_{2}^{2}}} & {\cdots} & {\frac{\partial^{2} f}{\partial x_{2} \partial x_{N}}} \\ {\frac{\partial^{2} f}{\partial x_{N} \partial x_{1}}} & {\frac{\partial^{2} f}{\partial x_{N} \partial x_{2}}} & {\cdots} & {\frac{\partial^{2} f}{\partial x_{N}^{2}}}\end{array}\right]_{N \times N}
 $$
 
+###数学推导
+####二阶泰勒展开式
+在现有极小点估计值的附近，对f(x)做二阶泰勒展开，进而找到极小点的下一个估计值。
+设$$x_k$$为当前的极小点估计值，则
+$$
+\varphi(x)=f\left(x_{k}\right)+f^{\prime}\left(x_{k}\right)\left(x-x_{k}\right)+\frac{1}{2} f^{\prime \prime}\left(x_{k}\right)\left(x-x_{k}\right)^{2}
+$$
+$$\varphi(x)$$为$$f(x)$$在$$x_k$$附近的二阶泰勒展开式近似函数，由于求的是极值，则
+$$
+\varphi^{\prime}(x)=0
+$$
+即
+$$
+f^{\prime}\left(x_{k}\right)+f^{\prime \prime}\left(x_{k}\right)\left(x-x_{k}\right)=0
+$$
+从而求得
+$$
+x=x_{k}-\frac{f^{\prime}\left(x_{k}\right)}{f^{\prime \prime}\left(x_{k}\right)}
+$$
+若给定初始值$$x_0$$，则得到迭代公式
+$$
+x_{k+1}=x_{k}-\frac{f^{\prime}\left(x_{k}\right)}{f^{\prime \prime}\left(x_{k}\right)}, k=0,1,...
+$$
+
 
 
 
