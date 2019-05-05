@@ -45,7 +45,21 @@ $$
 $$
 其中，$$\eta^\prime = \frac{\eta}{\|\nabla f(\theta_0) \|}$$
 
-#牛顿法
+#牛顿法（Newton's method）
+迭代公式如下：
+$$
+x_{k+1} = x_{k} - \frac{f^\prime(x_k)}{f^{\prime\prime}(x_k)}，k=0，1
+$$
+$$
+\mathbf{x}_{k+1}=\mathbf{x}_{k} - \frac{\nabla f(\mathbf{x}_{k})}{\nabla^{2} f(\mathbf{x}_{k})}=\mathbf{x}_{k}-H_{k}^{-1} \cdot \mathbf{g}_{k}
+$$
+其中，$$g=\nabla f$$为梯度向量，$$H=\nabla^{2}f$$为海森矩阵(Hessian matrix)，定义为
+$$
+g=\nabla f=\left[ \begin{array}{c}{\frac{\partial f}{\partial x_{1}}} \\ {\frac{\partial f}{\partial x_{2}}} \\ {\vdots} \\ {\frac{\partial f}{\partial x_{N}}}\end{array}\right]
+$$
+$$
+H=\nabla^{2} f=\left[ \begin{array}{cccc}{\frac{\partial^{2} f}{\partial x_{1}^{2}}} & {\frac{\partial^{2} f}{\partial x_{1} \partial x_{2}}} & {\cdots} & {\frac{\partial^{2} f}{\partial x_{1} \partial x_{N}}} \\ {\frac{\partial^{2} f}{\partial x_{2} \partial x_{1}}} & {\frac{\partial^{2} f}{\partial x_{2}^{2}}} & {\cdots} & {\frac{\partial^{2} f}{\partial x_{2} \partial x_{N}}} \\ {\frac{\partial^{2} f}{\partial x_{N} \partial x_{1}}} & {\frac{\partial^{2} f}{\partial x_{N} \partial x_{2}}} & {\cdots} & {\frac{\partial^{2} f}{\partial x_{N}^{2}}}\end{array}\right]_{N \times N}
+$$
 
 
 
