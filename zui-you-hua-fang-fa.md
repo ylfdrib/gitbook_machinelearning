@@ -87,7 +87,7 @@ $$
 
 ###阻尼牛顿法
 原始牛顿法由于迭代公式中没有步长因子，对于非二次型函数，有时会使函数值上升，即$$f\left(\mathbf{x}_{k+1}\right)>f\left(\mathbf{x}_{k}\right)$$，这表明原始牛顿法不能保证函数值的稳定下降，严重的情况下甚至造成迭代点列$$\{\mathbf{x}_k\}$$发散而导致计算失败。
-**阻尼牛顿法**相比原始牛顿法，在每次迭代中引入最优的步长因子$$\lambda_{k}$$，即
+**阻尼牛顿法**相比原始牛顿法，在每次迭代中引入最优的步长因子$$\lambda_{k}$$，即从点$$\mathbf{x_k}$$出发，沿着牛顿方向$$\mathbf{d}_k$$做一维搜索，获得最优步长：
 $$
 \lambda_{k}=\arg \min _{\lambda \in \mathbb{R}} f\left(\mathbf{x}_{k}+\lambda \mathbf{d}_{k}\right)
 $$
