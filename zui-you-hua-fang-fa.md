@@ -99,4 +99,50 @@ $$
 1. 对目标函数有较严格的要求，函数必须有连续的一阶、二阶偏导数，海森矩阵必须正定。
 2. 计算相当复杂，需要计算梯度、二阶偏导数矩阵及逆矩阵。计算/存储量很大，且均以参数维度 N 的平方比增加($$O(N^2)$$)。
 
-#拟牛顿法
+#拟牛顿法(Quasi-Newton Methods)
+参考[牛顿法与拟牛顿法](https://blog.csdn.net/itplus/article/details/21896619)
+拟牛顿法的**基本思想**是：
+1. 不用二阶偏导数而构造出可以近似海森矩阵(或海森矩阵的逆)的正定对称阵
+2. 在“拟牛顿”的条件下优化目标函数
+##拟牛顿条件
+设经过$$k+1$$次迭代后得到$$\mathbf{x}_{k+1}$$，将目标函数$$f(\mathbf{x})$$在$$\mathbf{x}_{k+1}$$附近做二阶泰勒展开：
+
+$$
+f(\mathrm{x}) \approx f\left(\mathrm{x}_{k+1}\right)+\nabla f\left(\mathrm{x}_{k+1}\right) \cdot\left(\mathrm{x}-\mathrm{x}_{k+1}\right)+\frac{1}{2} \cdot\left(\mathrm{x}-\mathrm{x}_{k+1}\right)^{T} \cdot \nabla^{2} f\left(\mathrm{x}_{k+1}\right) \cdot\left(\mathrm{x}-\mathrm{x}_{k+1}\right)
+$$
+两边同时作用一个梯度算子$$\nabla$$，可得
+$$
+\nabla f(\mathrm{x}) \approx \nabla f\left(\mathrm{x}_{k+1}\right)+H_{k+1} \cdot\left(\mathrm{x}-\mathrm{x}_{k+1}\right)
+$$
+
+取$$\mathrm{x} = \mathrm{x}_k$$，可得
+$$
+\mathbf{g}_{k+1}-\mathbf{g}_{k} \approx H_{k+1} \cdot\left(\mathbf{x}_{k+1}-\mathbf{x}_{k}\right)
+$$
+若引入记号：
+$$
+\mathbf{s}_{k}=\mathbf{x}_{k+1}-\mathbf{x}_{k}, \quad \mathbf{y}_{k}=\mathbf{g}_{k+1}-\mathbf{g}_{k}
+$$
+则可写成：
+$$
+\mathbf{y}_{k} \approx H_{k+1} \cdot \mathbf{s}_{k}，或者 \  \mathbf{s}_{k} \approx H_{k+1}^{-1} \cdot \mathbf{y}_{k}
+$$
+
+这就是所谓的**拟牛顿条件**，它对迭代过程中的海森矩阵$$H_{k+1}$$作约束，因此，对$$H_{k+1}$$作近似的$$B_{k+1}$$，以及对$$H_{k+1}^{-1}$$做近似的$$D_{k+1}$$可以将：
+$$
+\mathbf{y}_{k} = B_{k+1} \cdot \mathbf{s}_{k}，或者\ \mathbf{s}_{k}=D_{k+1} \cdot \mathbf{y}_{k}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
