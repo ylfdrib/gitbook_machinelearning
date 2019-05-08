@@ -19,7 +19,7 @@ $$
     r_{i m}=-\left[\frac{\partial L\left(y_{i}, F\left(x_{i}\right)\right)}{\partial F\left(x_{i}\right)}\right]_{F(x)=F_{m-1}(x)} \text { for } i=1, \ldots, n
     $$
         
-    b. 基于$${d}$$
+    b. 基于$$\left{\right}$$
     
     
     
