@@ -7,4 +7,5 @@
 * [信息熵](xin-xi-shang.md)
 * [决策树](jue-ce-shu.md)
 * [最优化方法](zui-you-hua-fang-fa.md)
+* [xgboost](xgboost.md)
 
