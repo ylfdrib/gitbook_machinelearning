@@ -15,9 +15,9 @@ $$
 2. 迭代生成M个基学习器
 
     a. 计算伪残差
-   $$
-   r_{i m}=-\left[\frac{\partial L\left(y_{i}, F\left(x_{i}\right)\right)}{\partial F\left(x_{i}\right)}\right]_{F(x)=F_{m-1}(x)} \text { for } i=1, \ldots, n
-   $$
+    $$
+    r_{i m}=-\left[\frac{\partial L\left(y_{i}, F\left(x_{i}\right)\right)}{\partial F\left(x_{i}\right)}\right]_{F(x)=F_{m-1}(x)} \text { for } i=1, \ldots, n
+    $$
         
     b. 基于$${d}$$
     
