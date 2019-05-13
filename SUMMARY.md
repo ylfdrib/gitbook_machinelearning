@@ -8,4 +8,5 @@
 * [决策树](jue-ce-shu.md)
 * [最优化方法](zui-you-hua-fang-fa.md)
 * [xgboost](xgboost.md)
+* [损失函数](sun-shi-han-shu.md)
 
