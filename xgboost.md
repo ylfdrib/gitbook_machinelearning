@@ -23,7 +23,7 @@ F_{0}(x)=\underset{\gamma}{\arg \min } \sum_{i=1}^{n} L\left(y_{i}, \gamma\right
 $$
 
 
-1. 迭代生成M个基学习器  
+2. 迭代生成M个基学习器  
    a. 计算伪残差
 
 
