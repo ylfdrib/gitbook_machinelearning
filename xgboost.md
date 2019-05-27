@@ -21,17 +21,17 @@ GB算法的步骤：
 $$
 F_{0}(x)=\underset{\gamma}{\arg \min } \sum_{i=1}^{n} L\left(y_{i}, \gamma\right)
 $$
-
-
 2. 迭代生成M个基学习器  
-   a. 计算伪残差
+
+a. 计算伪残差
 
 
-   $$
+$$
    r_{i m}=-\left[\frac{\partial L\left(y_{i}, F\left(x_{i}\right)\right)}{\partial F\left(x_{i}\right)}\right]_{F(x)=F_{m-1}(x)} \text { for } i=1, \ldots, n
-   $$
+$$
 
-   b. 基于样本$$\left\{\left(x_{i}, r_{i m}\right)\right\}_{i=1}^{n}$$，生成基学习器$$h_m(x)$$  
+
+b. 基于样本$$\left\{\left(x_{i}, r_{i m}\right)\right\}_{i=1}^{n}$$，生成基学习器$$h_m(x)$$  
    c. 计算最优的$$\gamma_m$$
 
 
