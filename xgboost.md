@@ -56,6 +56,25 @@ GB算法中最典型的基学习器是决策树，尤其是CART，
 
 #XGBoost
 XGB官方文档[XGBoost Documentation](https://xgboost.readthedocs.io/en/latest/index.html)
+##[Boosted Tree](https://xgboost.readthedocs.io/en/latest/tutorials/model.html)
+线性模型的函数形式是输入特征的线性组合：
+$$
+\hat{y}_{i}=\sum_{j} \theta_{j} x_{i j}
+$$
+经典的目标函数形式：
+$$
+\operatorname{obj}(\theta)=L(\theta)+\Omega(\theta) \\
+objective function = training loss + regularization \\
+目标函数 = 训练集loss + 正则项
+$$
+线性模型用的MSE(Mean squared error) loss，
+$$
+L(\theta)=\sum_{i}\left(y_{i}-\hat{y}_{i}\right)^{2}
+$$
+逻辑回归模型用的 交叉熵 loss，
+$$
+L(\theta)=\sum_{i}\left[y_{i} \ln \left(1+e^{-\hat{y}_{i}}\right)+\left(1-y_{i}\right) \ln \left(1+e^{\hat{y}_{i}}\right)\right]
+$$
 
 
 
