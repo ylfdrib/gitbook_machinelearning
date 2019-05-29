@@ -54,7 +54,7 @@ GB算法中最典型的基学习器是决策树，尤其是CART，
 
 参考GBM论文[Greedy Function Approximation: A Gradient Boosting Machine](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf)
 
-#XGBoostXGBoost
+#XGBoost
 XGB官方文档[XGBoost Documentation](https://xgboost.readthedocs.io/en/latest/index.html)
 
 
