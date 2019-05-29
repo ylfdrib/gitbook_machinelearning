@@ -73,8 +73,18 @@ L(\theta)=\sum_{i}\left(y_{i}-\hat{y}_{i}\right)^{2}
 $$
 逻辑回归模型用的 交叉熵 loss，
 $$
-L(\theta)=\sum_{i}\left[y_{i} \ln \left(1+e^{-\hat{y}_{i}}\right)+\left(1-y_{i}\right) \ln \left(1+e^{\hat{y}_{i}}\right)\right]
+L(\theta)=\sum_{i}\left[y_{i} \ln \left(1+e^{-\hat{y}_{i}}\right)+\left(1-y_{i}\right) \ln \left(1+e^{\hat{y}_{i}}\right)\right]，label=[0,1] \\
+L(\theta)=\sum_{i}\ln\left(1+e^{-2y_{i}\hat{y}_{i}}\right), label=[-1,1]
 $$
 
-
+###Decision Tree Ensembles
+GBDT 和 RandomForst 都属于Tree Ensembles一类模型，区别在于训练过程。
+GBDT的每棵子树都是回归模型，叶子节点的score对应着f(x)，而不是label(0,1)或者是概率p。
+$$
+\hat{y}_{i}=\sum_{k=1}^{K} f_{k}\left(x_{i}\right), f_{k} \in \mathcal{F}
+$$
+样本的最终分数，是所有树上的分数求和，每棵树的分数取的是样本最终落到的那个叶子节点分。最终的分类概率与分数的关系是：
+$$
+p = 1/ln(1+e^{-\hat{y}_{i}})
+$$
 
