@@ -83,9 +83,15 @@ GBDT的每棵子树都是回归模型，叶子节点的score对应着f(x)，而�
 $$
 \hat{y}_{i}=\sum_{k=1}^{K} f_{k}\left(x_{i}\right), f_{k} \in \mathcal{F}
 $$
-其中$$K$$是
+其中$$K$$是树的数量，$$\mathcal{F}$$是一个回归树集合，所有可能的CARTs。
 样本的最终分数，是所有树上的分数求和，每棵树的分数取的是样本最终落到的那个叶子节点分。最终的分类概率与分数的关系是：
 $$
 p = sigmoid(\hat{y}_{i}) = 1/(1+e^{-\hat{y}_{i}})
 $$
+目标函数可以写成：
+$$
+\operatorname{obj}(\theta)=\sum_{i}^{n} l\left(y_{i}, \hat{y}_{i}\right)+\sum_{k=1}^{K} \Omega\left(f_{k}\right)
+$$
+
+
 
