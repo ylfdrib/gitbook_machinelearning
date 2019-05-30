@@ -92,6 +92,19 @@ $$
 $$
 \operatorname{obj}(\theta)=\sum_{i}^{n} l\left(y_{i}, \hat{y}_{i}\right)+\sum_{k=1}^{K} \Omega\left(f_{k}\right)
 $$
+###Tree Boosting
+Tree Boosting 相比RandomForst的训练过程区别在于，additive training：一次训练一棵树，步步逼近最优解，目标函数
+$$
+\mathrm{obj}=\sum_{i=1}^{n} l\left(y_{i}, \hat{y}_{i}^{(t)}\right)+\sum_{i=1}^{t} \Omega\left(f_{i}\right)
+$$
+其中，第t次 prediction value为 $$\hat{y}_{i}^{(t)}$$：
+$$
+\hat{y}_{i}^{(t)}=\sum_{k=1}^{t} f_{k}\left(x_{i}\right)=\hat{y}_{i}^{(t-1)}+f_{t}\left(x_{i}\right)
+$$
+
+
+
+
 
 
 
