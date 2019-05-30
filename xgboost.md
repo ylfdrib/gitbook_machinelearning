@@ -156,6 +156,12 @@ $$
 $$
 \operatorname{Gain}=\frac{1}{2}\left[\frac{G_{L}^{2}}{H_{L}+\lambda}+\frac{G_{R}^{2}}{H_{R}+\lambda}-\frac{\left(G_{L}+G_{R}\right)^{2}}{H_{L}+H_{R}+\lambda}\right]-\gamma
 $$
+分别表示
+a. 左叶子节点得分 
+b. 右叶子节点得分 
+c. 原始叶子节点得分 
+d. 新增叶子的正则惩罚项
+
 
 
 
