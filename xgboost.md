@@ -106,6 +106,27 @@ $$
 \begin{aligned} \mathrm{obj}^{(t)} &=\sum_{i=1}^{n} l\left(y_{i}, \hat{y}_{i}^{(t)}\right)+\sum_{i=1}^{t} \Omega\left(f_{i}\right) \\ 
 &=\sum_{i=1}^{n} l\left(y_{i}, \hat{y}_{i}^{(t-1)}+f_{t}\left(x_{i}\right)\right)+\Omega\left(f_{t}\right)+\text { constant } \end{aligned}
 $$
+如果取MSE-loss，则
+$$
+\begin{aligned} \mathrm{obj}^{(t)} &=\sum_{i=1}^{n}\left(y_{i}-\left(\hat{y}_{i}^{(t-1)}+f_{t}\left(x_{i}\right)\right)\right)^{2}+\sum_{i=1}^{t} \Omega\left(f_{i}\right) \\ &=\sum_{i=1}^{n}\left[2\left(\hat{y}_{i}^{(t-1)}-y_{i}\right) f_{t}\left(x_{i}\right)+f_{t}\left(x_{i}\right)^{2}\right]+\Omega\left(f_{t}\right)+\mathrm{constant} \end{aligned}
+$$
+其中，在第t次训练中，$$f_t(x_i)$$为变量，$$y_i， \hat{y}_{i}^{(t-1)}$$为已知，合并为constant
+为了与其他类型的loss统一，从广义上定义一个一般的目标函数：
+($$l(y_i,\hat{y}_{i}^{(t)}$$ 在$$l(y_i,\hat{y}_{i}^{(t-1)}$$处的泰勒二阶展开，$$\Delta x =f_t(x_i)$$)
+$$
+\mathrm{obj}^{(t)}=\sum_{i=1}^{n}\left[l\left(y_{i}, \hat{y}_{i}^{(t-1)}\right)+g_{i} f_{t}\left(x_{i}\right)+\frac{1}{2} h_{i} f_{t}^{2}\left(x_{i}\right)\right]+\Omega\left(f_{t}\right)+\mathrm{constant}
+$$
+其中，$$g_i,h_i$$分别是一阶导和二阶导：
+$$
+\begin{aligned} g_{i} &=\partial_{\hat{y}_{i}^{(t-1)}}\left(y_{i}, \hat{y}_{i}^{(t-1)}\right) \\ h_{i} &=\partial_{\hat{y}_{i}^{(t-1}}^{2} l\left(y_{i}, \hat{y}_{i}^{(t-1)}\right) \end{aligned}
+$$
+去掉constants，第t次训练中，第7棵树的目标函数就是：
+$$
+\sum_{i=1}^{n}\left[g_{i} f_{t}\left(x_{i}\right)+\frac{1}{2} h_{i} f_{t}^{2}\left(x_{i}\right)\right]+\Omega\left(f_{t}\right)
+$$
+
+
+
 
 
 
