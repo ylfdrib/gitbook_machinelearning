@@ -145,14 +145,17 @@ $$
 $$
 \mathrm{obj}^{(t)}=\sum_{j=1}^{T}\left[G_{j} w_{j}+\frac{1}{2}\left(H_{j}+\lambda\right) w_{j}^{2}\right]+\gamma T
 $$
-$$w_j$$是相互独立的，公式$$G_{j} w_{j}+\frac{1}{2}\left(H_{j}+\lambda\right) w_{j}^{2}$$是二次形式，所以在$$q(x)$$已知情况下，可以直接求最优解：
+$$w_j$$是相互独立的，公式$$G_{j} w_{j}+\frac{1}{2}\left(H_{j}+\lambda\right) w_{j}^{2}$$是二次形式，所以在$$q(x)$$已知情况下，可以直接求导得到最优解：
 $$
 \begin{aligned} w_{j}^{*} &=-\frac{G_{j}}{H_{j}+\lambda} \\ \mathrm{obj}^{*} &=-\frac{1}{2} \sum_{j=1}^{T} \frac{G_{j}^{2}}{H_{j}+\lambda}+\gamma T \end{aligned}
 $$
 
 
-
-
+###Learn the tree structure
+构建树时，决定是否对叶子节点分裂的衡量指标：
+$$
+\operatorname{Gain}=\frac{1}{2}\left[\frac{G_{L}^{2}}{H_{L}+\lambda}+\frac{G_{R}^{2}}{H_{R}+\lambda}-\frac{\left(G_{L}+G_{R}\right)^{2}}{H_{L}+H_{R}+\lambda}\right]-\gamma
+$$
 
 
 
