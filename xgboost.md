@@ -122,8 +122,30 @@ $$
 $$
 去掉constants，第t次训练中，第7棵树的目标函数就是：
 $$
-\sum_{i=1}^{n}\left[g_{i} f_{t}\left(x_{i}\right)+\frac{1}{2} h_{i} f_{t}^{2}\left(x_{i}\right)\right]+\Omega\left(f_{t}\right)
+obj^{(t)} = \sum_{i=1}^{n}\left[g_{i} f_{t}\left(x_{i}\right)+\frac{1}{2} h_{i} f_{t}^{2}\left(x_{i}\right)\right]+\Omega\left(f_{t}\right)
 $$
+
+###模型复杂度
+正则项用来描述树的复杂度，定义树函数：
+$$
+f_{t}(x)=w_{q(x)}, w \in R^{T}, q : R^{d} \rightarrow\{1,2, \cdots, T\}
+$$
+其中，$$w$$是叶子上分数向量，$$T$$维，$$T$$表示当前树的叶子节点数, $$q$$表示一个映射，当前样本$$x$$映射到哪个叶子节点上，XGBoost的正则项表示为
+$$
+\Omega(f)=\gamma T+\frac{1}{2} \lambda \sum_{j=1}^{T} w_{j}^{2}
+$$
+
+###The Structure Score
+第t棵数的目标函数：
+$$
+\begin{aligned} \mathrm{obj}^{(t)} & \approx \sum_{i=1}^{n}\left[g_{i} w_{q\left(x_{i}\right)}+\frac{1}{2} h_{i} w_{q\left(x_{i}\right)}^{2}\right]+\gamma T+\frac{1}{2} \lambda \sum_{j=1}^{T} w_{j}^{2} \\ &=\sum_{j=1}^{T}\left[\left(\sum_{i \in I_{j}} g_{i}\right) w_{j}+\frac{1}{2}\left(\sum_{i \in I_{j}} h_{i}+\lambda\right) w_{j}^{2}\right]+\gamma T \end{aligned}
+$$
+其中，$$I_{j}=\left\{i | q\left(x_{i}\right)=j\right\}$$表示第j个叶子上的所有样本。
+定义：$$G_{j}=\sum_{i \in I_{j}} g_{i}，H_{j}=\sum_{i \in I_{j}} h_{i}$$，则
+$$
+\mathrm{obj}^{(t)}=\sum_{j=1}^{T}\left[G_{j} w_{j}+\frac{1}{2}\left(H_{j}+\lambda\right) w_{j}^{2}\right]+\gamma T
+$$
+
 
 
 
