@@ -73,8 +73,8 @@ L(\theta)=\sum_{i}\left(y_{i}-\hat{y}_{i}\right)^{2}
 $$
 逻辑回归模型用的 交叉熵 loss，
 $$
-L(\theta)=\sum_{i}\left[y_{i} \ln \left(1+e^{-\hat{y}_{i}}\right)+\left(1-y_{i}\right) \ln \left(1+e^{\hat{y}_{i}}\right)\right]，label=[0,1] \\
-L(\theta)=\sum_{i}\ln\left(1+e^{-2y_{i}\hat{y}_{i}}\right), label=[-1,1]
+L(\theta) =\sum_{i}\left[y_{i} \ln \left(1+e^{-\hat{y}_{i}}\right)+\left(1-y_{i}\right) \ln \left(1+e^{\hat{y}_{i}}\right)\right]，label=[0,1] \\
+L(\theta) =\sum_{i}\ln\left(1+e^{-2y_{i}\hat{y}_{i}}\right), label=[-1,1]
 $$
 
 ###Decision Tree Ensembles
@@ -100,6 +100,11 @@ $$
 其中，第t次 prediction value为 $$\hat{y}_{i}^{(t)}$$：
 $$
 \hat{y}_{i}^{(t)}=\sum_{k=1}^{t} f_{k}\left(x_{i}\right)=\hat{y}_{i}^{(t-1)}+f_{t}\left(x_{i}\right)
+$$
+so，迭代的目标函数为
+$$
+\begin{aligned} \mathrm{obj}^{(t)} &=\sum_{i=1}^{n} l\left(y_{i}, \hat{y}_{i}^{(t)}\right)+\sum_{i=1}^{t} \Omega\left(f_{i}\right) \\ 
+&=\sum_{i=1}^{n} l\left(y_{i}, \hat{y}_{i}^{(t-1)}+f_{t}\left(x_{i}\right)\right)+\Omega\left(f_{t}\right)+\text { constant } \end{aligned}
 $$
 
 
