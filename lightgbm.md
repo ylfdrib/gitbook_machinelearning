@@ -12,4 +12,5 @@
 - 稀疏优化
     - 构造稀疏特征的直方图，只需要O(2 * #non_zero_data)
 - 准确率提升
-    
+    - Leaf-wise(Best-first) 方式树生长
+        - 大部分决策树都是按level(depth)-wise方式生长（每次取）
