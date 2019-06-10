@@ -1,6 +1,7 @@
 #lightGBM
 **lightGBM**也是一种GBDT框架，相比**XGBoost**，有一定的优势
 [lightGBM vs XGBoost](https://lightgbm.readthedocs.io/en/latest/Features.html)
+[机器学习算法之LightGBM](https://www.biaodianfu.com/lightgbm.html)
 - 训练速度更快，占用内存更小
     - 每次划分计算增益的时候，速度更快
         - XGB用的是pre-sort-based 方法对特征值排序，时间复杂度O(#data)
