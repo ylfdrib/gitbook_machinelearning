@@ -1,0 +1,475 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>xgboost · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="sun-shi-han-shu.html" />
+    
+    
+    <link rel="prev" href="zui-you-hua-fang-fa.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    线性模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="bayesian.html">
+            
+                <a href="bayesian.html">
+            
+                    
+                    Bayesian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="tu-you-hua.html">
+            
+                <a href="tu-you-hua.html">
+            
+                    
+                    凸优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="xin-xi-shang.html">
+            
+                <a href="xin-xi-shang.html">
+            
+                    
+                    信息熵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="jue-ce-shu.html">
+            
+                <a href="jue-ce-shu.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="zui-you-hua-fang-fa.html">
+            
+                <a href="zui-you-hua-fang-fa.html">
+            
+                    
+                    最优化方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="xgboost.html">
+            
+                <a href="xgboost.html">
+            
+                    
+                    xgboost
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="sun-shi-han-shu.html">
+            
+                <a href="sun-shi-han-shu.html">
+            
+                    
+                    损失函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="lightgbm.html">
+            
+                <a href="lightgbm.html">
+            
+                    
+                    lightGBM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >xgboost</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="gradient-boostinggb">Gradient boosting(GB)</h1>
+<p>GB&#x7684;&#x601D;&#x60F3;&#x662F;&#x8FED;&#x4EE3;&#x751F;&#x6210;&#x591A;&#x4E2A;&#x5F31;&#x6A21;&#x578B;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6BCF;&#x4E2A;&#x5F31;&#x6A21;&#x578B;&#x7684;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x76F8;&#x52A0;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x6A21;&#x578B;$$F_{m+1}(x)$$&#x57FA;&#x4E8E;&#x524D;&#x4E00;&#x4E2A;&#x6A21;&#x578B;$$F_m(x)$$&#x7684;&#x6548;&#x679C;&#x751F;&#x6210;&#xFF0C;&#x5173;&#x7CFB;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>$$
+F<em>{m+1}(x)=F</em>{m}(x)+h(x)&#xFF0C;1 \leq m \leq M</p>
+<p>$$</p>
+<p>&#x600E;&#x4E48;&#x751F;&#x6210;$$h(x)$$ ?  </p>
+<ol>
+<li>&#x5982;&#x679C;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x662F;&#x56DE;&#x5F52;&#x95EE;&#x9898;&#x7684;&#x5747;&#x65B9;&#x8BEF;&#x5DEE;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x60F3;&#x5230;&#x6700;&#x7406;&#x60F3;&#x7684;$$h(x)$$&#x662F;&#x62DF;&#x5408; $$y-F_m(x)$$&#xFF0C;&#x5C31;&#x662F;&#x5E38;&#x8BF4;&#x7684;&#x57FA;&#x4E8E;&#x6B8B;&#x5DEE;&#x7684;&#x5B66;&#x4E60;&#x3002;  </li>
+<li>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x662F;&#x57FA;&#x4E8E;Loss Function&#x5728;<strong>&#x51FD;&#x6570;&#x7A7A;&#x95F4;</strong>&#x7684;&#x8D1F;&#x68AF;&#x5EA6;&#x65B9;&#x5411;&#xFF0C;&#x5BF9;&#x4E8E;&#x56DE;&#x5F52;&#x95EE;&#x9898;$$\frac{1}{2}(y-F(x))^2$$&#xFF0C;&#x6B8B;&#x5DEE;&#x4E0E;&#x8D1F;&#x68AF;&#x5EA6;&#x65B9;&#x5411;&#x76F8;&#x540C;&#xFF0C;&#x56E0;&#x6B64;&#x57FA;&#x4E8E;&#x8D1F;&#x68AF;&#x5EA6;&#x7684;&#x5B66;&#x4E60;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&quot;&#x4F2A;&#x6B8B;&#x5DEE;&quot;&#x3002;</li>
+</ol>
+<p><img src="assets/import.png" alt=""></p>
+<p>GB&#x7B97;&#x6CD5;&#x7684;&#x6B65;&#x9AA4;&#xFF1A;  </p>
+<ol>
+<li>&#x521D;&#x59CB;&#x5316;&#x6A21;&#x578B;&#x4E3A;&#x5E38;&#x6570;&#x503C;&#xFF1A;</li>
+</ol>
+<p>$$
+F<em>{0}(x)=\underset{\gamma}{\arg \min } \sum</em>{i=1}^{n} L\left(y_{i}, \gamma\right)</p>
+<p>$$</p>
+<ol>
+<li>&#x8FED;&#x4EE3;&#x751F;&#x6210;M&#x4E2A;&#x57FA;&#x5B66;&#x4E60;&#x5668;  </li>
+</ol>
+<p>a. &#x8BA1;&#x7B97;&#x4F2A;&#x6B8B;&#x5DEE;</p>
+<p>$$
+   r<em>{i m}=-\left[\frac{\partial L\left(y</em>{i}, F\left(x<em>{i}\right)\right)}{\partial F\left(x</em>{i}\right)}\right]<em>{F(x)=F</em>{m-1}(x)} \text { for } i=1, \ldots, n</p>
+<p>$$</p>
+<p>b. &#x57FA;&#x4E8E;&#x6837;&#x672C;$$\left{\left(x<em>{i}, r</em>{i m}\right)\right}_{i=1}^{n}$$&#xFF0C;&#x751F;&#x6210;&#x57FA;&#x5B66;&#x4E60;&#x5668;$$h_m(x)$$<br>   c. &#x8BA1;&#x7B97;&#x6700;&#x4F18;&#x7684;$$\gamma_m$$</p>
+<p>$$
+   \gamma<em>{m}=\underset{\gamma}{\arg \min } \sum</em>{i=1}^{n} L\left(y<em>{i}, F</em>{m-1}\left(x<em>{i}\right)+\gamma h</em>{m}\left(x_{i}\right)\right)</p>
+<p>$$</p>
+<p>d. &#x66F4;&#x65B0;&#x6A21;&#x578B;</p>
+<p>$$
+   F<em>{m}(x)=F</em>{m-1}(x)+\gamma<em>{m} h</em>{m}(x)</p>
+<p>$$</p>
+<h1 id="gradient-boosting-decision-treegbdt">Gradient boosting Decision Tree(GBDT)</h1>
+<p>GB&#x7B97;&#x6CD5;&#x4E2D;&#x6700;&#x5178;&#x578B;&#x7684;&#x57FA;&#x5B66;&#x4E60;&#x5668;&#x662F;&#x51B3;&#x7B56;&#x6811;&#xFF0C;&#x5C24;&#x5176;&#x662F;CART&#xFF0C;</p>
+<p>&#x53C2;&#x8003;GBM&#x8BBA;&#x6587;<a href="https://statweb.stanford.edu/~jhf/ftp/trebst.pdf" target="_blank">Greedy Function Approximation: A Gradient Boosting Machine</a></p>
+<h1 id="xgboost">XGBoost</h1>
+<p>XGB&#x5B98;&#x65B9;&#x6587;&#x6863;<a href="https://xgboost.readthedocs.io/en/latest/index.html" target="_blank">XGBoost Documentation</a></p>
+<h2 id="boosted-tree"><a href="https://xgboost.readthedocs.io/en/latest/tutorials/model.html" target="_blank">Boosted Tree</a></h2>
+<p>&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x7684;&#x51FD;&#x6570;&#x5F62;&#x5F0F;&#x662F;&#x8F93;&#x5165;&#x7279;&#x5F81;&#x7684;&#x7EBF;&#x6027;&#x7EC4;&#x5408;&#xFF1A;</p>
+<p>$$
+\hat{y}<em>{i}=\sum</em>{j} \theta<em>{j} x</em>{i j}</p>
+<p>$$</p>
+<p>&#x7ECF;&#x5178;&#x7684;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<p>$$
+\operatorname{obj}(\theta)=L(\theta)+\Omega(\theta) \
+objective function = training loss + regularization \
+&#x76EE;&#x6807;&#x51FD;&#x6570; = &#x8BAD;&#x7EC3;&#x96C6;loss + &#x6B63;&#x5219;&#x9879;</p>
+<p>$$</p>
+<p>&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x7528;&#x7684;MSE(Mean squared error) loss&#xFF0C;</p>
+<p>$$
+L(\theta)=\sum<em>{i}\left(y</em>{i}-\hat{y}_{i}\right)^{2}</p>
+<p>$$</p>
+<p>&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#x7528;&#x7684; &#x4EA4;&#x53C9;&#x71B5; loss&#xFF0C;</p>
+<p>$$
+L(\theta) =\sum<em>{i}\left[y</em>{i} \ln \left(1+e^{-\hat{y}<em>{i}}\right)+\left(1-y</em>{i}\right) \ln \left(1+e^{\hat{y}<em>{i}}\right)\right]&#xFF0C;label=[0,1] \
+L(\theta) =\sum</em>{i}\ln\left(1+e^{-2y<em>{i}\hat{y}</em>{i}}\right), label=[-1,1]</p>
+<p>$$</p>
+<h3 id="decision-tree-ensembles">Decision Tree Ensembles</h3>
+<p>GBDT &#x548C; RandomForst &#x90FD;&#x5C5E;&#x4E8E;Tree Ensembles&#x4E00;&#x7C7B;&#x6A21;&#x578B;&#xFF0C;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x8BAD;&#x7EC3;&#x8FC7;&#x7A0B;&#x3002;<br>GBDT&#x7684;&#x6BCF;&#x68F5;&#x5B50;&#x6811;&#x90FD;&#x662F;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#xFF0C;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;score&#x5BF9;&#x5E94;&#x7740;f(x)&#xFF0C;&#x800C;&#x4E0D;&#x662F;label(0,1)&#x6216;&#x8005;&#x662F;&#x6982;&#x7387;p&#x3002;</p>
+<p>$$
+\hat{y}<em>{i}=\sum</em>{k=1}^{K} f<em>{k}\left(x</em>{i}\right), f_{k} \in \mathcal{F}</p>
+<p>$$</p>
+<p>&#x5176;&#x4E2D;$$K$$&#x662F;&#x6811;&#x7684;&#x6570;&#x91CF;&#xFF0C;$$\mathcal{F}$$&#x662F;&#x4E00;&#x4E2A;&#x56DE;&#x5F52;&#x6811;&#x96C6;&#x5408;&#xFF0C;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7684;CARTs&#x3002;<br>&#x6837;&#x672C;&#x7684;&#x6700;&#x7EC8;&#x5206;&#x6570;&#xFF0C;&#x662F;&#x6240;&#x6709;&#x6811;&#x4E0A;&#x7684;&#x5206;&#x6570;&#x6C42;&#x548C;&#xFF0C;&#x6BCF;&#x68F5;&#x6811;&#x7684;&#x5206;&#x6570;&#x53D6;&#x7684;&#x662F;&#x6837;&#x672C;&#x6700;&#x7EC8;&#x843D;&#x5230;&#x7684;&#x90A3;&#x4E2A;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5206;&#x3002;&#x6700;&#x7EC8;&#x7684;&#x5206;&#x7C7B;&#x6982;&#x7387;&#x4E0E;&#x5206;&#x6570;&#x7684;&#x5173;&#x7CFB;&#x662F;&#xFF1A;</p>
+<p>$$
+p = sigmoid(\hat{y}<em>{i}) = 1/(1+e^{-\hat{y}</em>{i}})</p>
+<p>$$</p>
+<p>&#x76EE;&#x6807;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5199;&#x6210;&#xFF1A;</p>
+<p>$$
+\operatorname{obj}(\theta)=\sum<em>{i}^{n} l\left(y</em>{i}, \hat{y}<em>{i}\right)+\sum</em>{k=1}^{K} \Omega\left(f_{k}\right)</p>
+<p>$$</p>
+<h3 id="tree-boosting">Tree Boosting</h3>
+<p>Tree Boosting &#x76F8;&#x6BD4;RandomForst&#x7684;&#x8BAD;&#x7EC3;&#x8FC7;&#x7A0B;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;additive training&#xFF1A;&#x4E00;&#x6B21;&#x8BAD;&#x7EC3;&#x4E00;&#x68F5;&#x6811;&#xFF0C;&#x6B65;&#x6B65;&#x903C;&#x8FD1;&#x6700;&#x4F18;&#x89E3;&#xFF0C;&#x76EE;&#x6807;&#x51FD;&#x6570;</p>
+<p>$$
+\mathrm{obj}=\sum<em>{i=1}^{n} l\left(y</em>{i}, \hat{y}<em>{i}^{(t)}\right)+\sum</em>{i=1}^{t} \Omega\left(f_{i}\right)</p>
+<p>$$</p>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x7B2C;t&#x6B21; prediction value&#x4E3A; $$\hat{y}_{i}^{(t)}$$&#xFF1A;</p>
+<p>$$
+\hat{y}<em>{i}^{(t)}=\sum</em>{k=1}^{t} f<em>{k}\left(x</em>{i}\right)=\hat{y}<em>{i}^{(t-1)}+f</em>{t}\left(x_{i}\right)</p>
+<p>$$</p>
+<p>so&#xFF0C;&#x8FED;&#x4EE3;&#x7684;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x4E3A;</p>
+<p>$$
+\begin{aligned} \mathrm{obj}^{(t)} &amp;=\sum<em>{i=1}^{n} l\left(y</em>{i}, \hat{y}<em>{i}^{(t)}\right)+\sum</em>{i=1}^{t} \Omega\left(f<em>{i}\right) \ 
+&amp;=\sum</em>{i=1}^{n} l\left(y<em>{i}, \hat{y}</em>{i}^{(t-1)}+f<em>{t}\left(x</em>{i}\right)\right)+\Omega\left(f_{t}\right)+\text { constant } \end{aligned}</p>
+<p>$$</p>
+<p>&#x5982;&#x679C;&#x53D6;MSE-loss&#xFF0C;&#x5219;</p>
+<p>$$
+\begin{aligned} \mathrm{obj}^{(t)} &amp;=\sum<em>{i=1}^{n}\left(y</em>{i}-\left(\hat{y}<em>{i}^{(t-1)}+f</em>{t}\left(x<em>{i}\right)\right)\right)^{2}+\sum</em>{i=1}^{t} \Omega\left(f<em>{i}\right) \ &amp;=\sum</em>{i=1}^{n}\left[2\left(\hat{y}<em>{i}^{(t-1)}-y</em>{i}\right) f<em>{t}\left(x</em>{i}\right)+f<em>{t}\left(x</em>{i}\right)^{2}\right]+\Omega\left(f_{t}\right)+\mathrm{constant} \end{aligned}</p>
+<p>$$</p>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x5728;&#x7B2C;t&#x6B21;&#x8BAD;&#x7EC3;&#x4E2D;&#xFF0C;$$f<em>t(x_i)$$&#x4E3A;&#x53D8;&#x91CF;&#xFF0C;$$y_i&#xFF0C; \hat{y}</em>{i}^{(t-1)}$$&#x4E3A;&#x5DF2;&#x77E5;&#xFF0C;&#x5408;&#x5E76;&#x4E3A;constant<br>&#x4E3A;&#x4E86;&#x4E0E;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;loss&#x7EDF;&#x4E00;&#xFF0C;&#x4ECE;&#x5E7F;&#x4E49;&#x4E0A;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x4E00;&#x822C;&#x7684;&#x76EE;&#x6807;&#x51FD;&#x6570;&#xFF1A;<br>($$l(y<em>i,\hat{y}</em>{i}^{(t)}$$ &#x5728;$$l(y<em>i,\hat{y}</em>{i}^{(t-1)}$$&#x5904;&#x7684;&#x6CF0;&#x52D2;&#x4E8C;&#x9636;&#x5C55;&#x5F00;&#xFF0C;$$\Delta x =f_t(x_i)$$)</p>
+<p>$$
+\mathrm{obj}^{(t)}=\sum<em>{i=1}^{n}\left[l\left(y</em>{i}, \hat{y}<em>{i}^{(t-1)}\right)+g</em>{i} f<em>{t}\left(x</em>{i}\right)+\frac{1}{2} h<em>{i} f</em>{t}^{2}\left(x<em>{i}\right)\right]+\Omega\left(f</em>{t}\right)+\mathrm{constant}</p>
+<p>$$</p>
+<p>&#x5176;&#x4E2D;&#xFF0C;$$g_i,h_i$$&#x5206;&#x522B;&#x662F;&#x4E00;&#x9636;&#x5BFC;&#x548C;&#x4E8C;&#x9636;&#x5BFC;&#xFF1A;</p>
+<p>$$
+\begin{aligned} g<em>{i} &amp;=\partial</em>{\hat{y}<em>{i}^{(t-1)}}\left(y</em>{i}, \hat{y}<em>{i}^{(t-1)}\right) \ h</em>{i} &amp;=\partial<em>{\hat{y}</em>{i}^{(t-1}}^{2} l\left(y<em>{i}, \hat{y}</em>{i}^{(t-1)}\right) \end{aligned}</p>
+<p>$$</p>
+<p>&#x53BB;&#x6389;constants&#xFF0C;&#x7B2C;t&#x6B21;&#x8BAD;&#x7EC3;&#x4E2D;&#xFF0C;&#x7B2C;7&#x68F5;&#x6811;&#x7684;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x5C31;&#x662F;&#xFF1A;</p>
+<p>$$
+obj^{(t)} = \sum<em>{i=1}^{n}\left[g</em>{i} f<em>{t}\left(x</em>{i}\right)+\frac{1}{2} h<em>{i} f</em>{t}^{2}\left(x<em>{i}\right)\right]+\Omega\left(f</em>{t}\right)</p>
+<p>$$</p>
+<h3 id="&#x6A21;&#x578B;&#x590D;&#x6742;&#x5EA6;">&#x6A21;&#x578B;&#x590D;&#x6742;&#x5EA6;</h3>
+<p>&#x6B63;&#x5219;&#x9879;&#x7528;&#x6765;&#x63CF;&#x8FF0;&#x6811;&#x7684;&#x590D;&#x6742;&#x5EA6;&#xFF0C;&#x5B9A;&#x4E49;&#x6811;&#x51FD;&#x6570;&#xFF1A;</p>
+<p>$$
+f<em>{t}(x)=w</em>{q(x)}, w \in R^{T}, q : R^{d} \rightarrow{1,2, \cdots, T}</p>
+<p>$$</p>
+<p>&#x5176;&#x4E2D;&#xFF0C;$$w$$&#x662F;&#x53F6;&#x5B50;&#x4E0A;&#x5206;&#x6570;&#x5411;&#x91CF;&#xFF0C;$$T$$&#x7EF4;&#xFF0C;$$T$$&#x8868;&#x793A;&#x5F53;&#x524D;&#x6811;&#x7684;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x6570;, $$q$$&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x6620;&#x5C04;&#xFF0C;&#x5F53;&#x524D;&#x6837;&#x672C;$$x$$&#x6620;&#x5C04;&#x5230;&#x54EA;&#x4E2A;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x4E0A;&#xFF0C;XGBoost&#x7684;&#x6B63;&#x5219;&#x9879;&#x8868;&#x793A;&#x4E3A;</p>
+<p>$$
+\Omega(f)=\gamma T+\frac{1}{2} \lambda \sum<em>{j=1}^{T} w</em>{j}^{2}</p>
+<p>$$</p>
+<h3 id="the-structure-score">The Structure Score</h3>
+<p>&#x7B2C;t&#x68F5;&#x6570;&#x7684;&#x76EE;&#x6807;&#x51FD;&#x6570;&#xFF1A;</p>
+<p>$$
+\begin{aligned} \mathrm{obj}^{(t)} &amp; \approx \sum<em>{i=1}^{n}\left[g</em>{i} w<em>{q\left(x</em>{i}\right)}+\frac{1}{2} h<em>{i} w</em>{q\left(x<em>{i}\right)}^{2}\right]+\gamma T+\frac{1}{2} \lambda \sum</em>{j=1}^{T} w<em>{j}^{2} \ &amp;=\sum</em>{j=1}^{T}\left[\left(\sum<em>{i \in I</em>{j}} g<em>{i}\right) w</em>{j}+\frac{1}{2}\left(\sum<em>{i \in I</em>{j}} h<em>{i}+\lambda\right) w</em>{j}^{2}\right]+\gamma T \end{aligned}</p>
+<p>$$</p>
+<p>&#x5176;&#x4E2D;&#xFF0C;$$I<em>{j}=\left{i | q\left(x</em>{i}\right)=j\right}$$&#x8868;&#x793A;&#x7B2C;j&#x4E2A;&#x53F6;&#x5B50;&#x4E0A;&#x7684;&#x6240;&#x6709;&#x6837;&#x672C;&#x3002;<br>&#x5B9A;&#x4E49;&#xFF1A;$$G<em>{j}=\sum</em>{i \in I<em>{j}} g</em>{i}&#xFF0C;H<em>{j}=\sum</em>{i \in I<em>{j}} h</em>{i}$$&#xFF0C;&#x5219;</p>
+<p>$$
+\mathrm{obj}^{(t)}=\sum<em>{j=1}^{T}\left[G</em>{j} w<em>{j}+\frac{1}{2}\left(H</em>{j}+\lambda\right) w_{j}^{2}\right]+\gamma T</p>
+<p>$$</p>
+<p>$$w<em>j$$&#x662F;&#x76F8;&#x4E92;&#x72EC;&#x7ACB;&#x7684;&#xFF0C;&#x516C;&#x5F0F;$$G</em>{j} w<em>{j}+\frac{1}{2}\left(H</em>{j}+\lambda\right) w_{j}^{2}$$&#x662F;&#x4E8C;&#x6B21;&#x5F62;&#x5F0F;&#xFF0C;&#x6240;&#x4EE5;&#x5728;$$q(x)$$&#x5DF2;&#x77E5;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x6C42;&#x5BFC;&#x5F97;&#x5230;&#x6700;&#x4F18;&#x89E3;&#xFF1A;</p>
+<p>$$
+\begin{aligned} w<em>{j}^{*} &amp;=-\frac{G</em>{j}}{H<em>{j}+\lambda} \ \mathrm{obj}^{*} &amp;=-\frac{1}{2} \sum</em>{j=1}^{T} \frac{G<em>{j}^{2}}{H</em>{j}+\lambda}+\gamma T \end{aligned}</p>
+<p>$$</p>
+<h3 id="learn-the-tree-structure">Learn the tree structure</h3>
+<p>&#x6784;&#x5EFA;&#x6811;&#x65F6;&#xFF0C;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x5BF9;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5206;&#x88C2;&#x7684;&#x8861;&#x91CF;&#x6307;&#x6807;&#xFF1A;</p>
+<p>$$
+\operatorname{Gain}=\frac{1}{2}\left[\frac{G<em>{L}^{2}}{H</em>{L}+\lambda}+\frac{G<em>{R}^{2}}{H</em>{R}+\lambda}-\frac{\left(G<em>{L}+G</em>{R}\right)^{2}}{H<em>{L}+H</em>{R}+\lambda}\right]-\gamma</p>
+<p>$$</p>
+<p>&#x5206;&#x522B;&#x8868;&#x793A;<br>a. &#x5DE6;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5F97;&#x5206;<br>b. &#x53F3;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5F97;&#x5206;<br>c. &#x539F;&#x59CB;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5F97;&#x5206;<br>d. &#x65B0;&#x589E;&#x53F6;&#x5B50;&#x7684;&#x6B63;&#x5219;&#x60E9;&#x7F5A;&#x9879;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="zui-you-hua-fang-fa.html" class="navigation navigation-prev " aria-label="Previous page: 最优化方法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="sun-shi-han-shu.html" class="navigation navigation-next " aria-label="Next page: 损失函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"xgboost","level":"1.8","depth":1,"next":{"title":"损失函数","level":"1.9","depth":1,"path":"sun-shi-han-shu.md","ref":"sun-shi-han-shu.md","articles":[]},"previous":{"title":"最优化方法","level":"1.7","depth":1,"path":"zui-you-hua-fang-fa.md","ref":"zui-you-hua-fang-fa.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"xgboost.md","mtime":"2019-09-29T09:28:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-29T09:29:26.543Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

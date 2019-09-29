@@ -1,0 +1,442 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>信息熵 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="jue-ce-shu.html" />
+    
+    
+    <link rel="prev" href="tu-you-hua.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    线性模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="bayesian.html">
+            
+                <a href="bayesian.html">
+            
+                    
+                    Bayesian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="tu-you-hua.html">
+            
+                <a href="tu-you-hua.html">
+            
+                    
+                    凸优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="xin-xi-shang.html">
+            
+                <a href="xin-xi-shang.html">
+            
+                    
+                    信息熵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="jue-ce-shu.html">
+            
+                <a href="jue-ce-shu.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="zui-you-hua-fang-fa.html">
+            
+                <a href="zui-you-hua-fang-fa.html">
+            
+                    
+                    最优化方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="xgboost.html">
+            
+                <a href="xgboost.html">
+            
+                    
+                    xgboost
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="sun-shi-han-shu.html">
+            
+                <a href="sun-shi-han-shu.html">
+            
+                    
+                    损失函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="lightgbm.html">
+            
+                <a href="lightgbm.html">
+            
+                    
+                    lightGBM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >信息熵</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4FE1;&#x606F;&#x71B5;">&#x4FE1;&#x606F;&#x71B5;</h1>
+<p>entropy, &#x71B5;&#x662F;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x7684;&#x5EA6;&#x91CF;</p>
+<p>$$
+H(X)=-\sum_{i=1}^{n}p(x_i)logp(x_i)</p>
+<p>$$
+&#x5728;&#x4FE1;&#x606F;&#x8BBA;&#x4E2D;&#xFF0C;&#x5C06;&#x4E00;&#x4E32;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x6309;&#x4E8C;&#x8FDB;&#x5236;&#x7F16;&#x7801;&#xFF0C;&#x4FE1;&#x606F;&#x71B5;&#x662F;&#x7406;&#x8BBA;&#x4E0A;&#x7684;&#x6700;&#x5C0F;&#x5E73;&#x5747;&#x7F16;&#x7801;&#x957F;&#x5EA6;&#xFF0C;&#x6216;&#x8005;&#x6700;&#x4F18;&#x7F16;&#x7801;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x9700;&#x8981;&#x7684;&#x6BD4;&#x7279;&#x6570;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;ABBC&#x5982;&#x679C;&#x4EE5;&#x4E8C;&#x8FDB;&#x5236;&#x7F16;&#x7801;&#xFF0C;&#x6700;&#x5C0F;&#x5E73;&#x5747;&#x7F16;&#x7801;&#x957F;&#x5EA6;&#x5C31;&#x662F;</p>
+<p>$$
+length = H(X) \
+  = -p(A)logp(A) - p(B)logp(B) - p(C)logp(C) \
+  =-1/4log(1/4) - 1/2log(1/2) - 1/4log(1/4) \
+  =1.5</p>
+<p>$$
+huffman&#x7F16;&#x7801;&#xFF1A;encode(A)=00, encode(B)=1, encode(C)=01&#xFF0C;&#x5219;encode(ABBC)=001101&#xFF0C;&#x7F16;&#x7801;&#x603B;&#x957F;&#x5EA6;&#x4E3A;6&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#x4E3A;4&#xFF0C;&#x5E73;&#x5747;&#x7F16;&#x7801;&#x957F;&#x5EA6;&#x4E3A;6/4=1.5</p>
+<h1 id="&#x6761;&#x4EF6;&#x71B5;">&#x6761;&#x4EF6;&#x71B5;</h1>
+<p>&#x5728;x&#x53D6;&#x503C;&#x4E00;&#x5B9A;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x968F;&#x673A;&#x53D8;&#x91CF;y&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x7684;&#x5EA6;&#x91CF;</p>
+<p>$$
+H(Y|X) = \sum_{x \in X} p(x)H(Y|X=x)</p>
+<p>$$</p>
+<h1 id="&#x4FE1;&#x606F;&#x589E;&#x76CA;">&#x4FE1;&#x606F;&#x589E;&#x76CA;</h1>
+<p>information gain, &#x4FE1;&#x606F;&#x589E;&#x76CA;&#x5C31;&#x662F;&#x71B5;&#x548C;&#x7279;&#x5F81;&#x6761;&#x4EF6;&#x71B5;&#x7684;&#x5DEE;&#xFF0C;&#x5C31;&#x662F;&#x4EE5;&#x67D0;&#x7279;&#x5F81;A&#x5212;&#x5206;&#x6570;&#x636E;&#x96C6;D&#x524D;&#x540E;&#x7684;&#x71B5;(&#x4E0D;&#x786E;&#x5B9A;&#x6027;)&#x7684;&#x5DEE;&#x503C;</p>
+<pre><code>&#x4FE1;&#x606F;&#x589E;&#x76CA; =  entroy(&#x524D;) -  entroy(&#x540E;)
+</code></pre><p>$$
+ g(D,A)= H(D) - H(D|A)</p>
+<p>$$</p>
+<p><strong>&#x7F3A;&#x70B9;</strong>&#xFF1A;&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x504F;&#x5411;&#x53D6;&#x503C;&#x8F83;&#x591A;&#x7684;&#x7279;&#x5F81;
+<strong>&#x539F;&#x56E0;</strong>&#xFF1A;&#x5F53;&#x7279;&#x5F81;&#x7684;&#x53D6;&#x503C;&#x8F83;&#x591A;&#x65F6;&#xFF0C;&#x6839;&#x636E;&#x6B64;&#x7279;&#x5F81;&#x5212;&#x5206;&#x66F4;&#x5BB9;&#x6613;&#x5F97;&#x5230;&#x7EAF;&#x5EA6;&#x66F4;&#x9AD8;&#x7684;&#x5B50;&#x96C6;&#xFF0C;&#x56E0;&#x6B64;&#x5212;&#x5206;&#x4E4B;&#x540E;&#x7684;&#x71B5;&#x66F4;&#x4F4E;&#xFF0C;&#x7531;&#x4E8E;&#x5212;&#x5206;&#x524D;&#x7684;&#x71B5;&#x662F;&#x4E00;&#x5B9A;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x66F4;&#x5927;&#xFF0C;&#x56E0;&#x6B64;&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x6BD4;&#x8F83; &#x504F;&#x5411;&#x53D6;&#x503C;&#x8F83;&#x591A;&#x7684;&#x7279;&#x5F81;&#x3002; &#x7F3A;&#x70B9;&#xFF1A;&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x504F;&#x5411;&#x53D6;&#x503C;&#x8F83;&#x591A;&#x7684;&#x7279;&#x5F81;</p>
+<h1 id="&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x6BD4;">&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x6BD4;</h1>
+<p>information gain rate</p>
+<pre><code>&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x6BD4; = &#x60E9;&#x7F5A;&#x53C2;&#x6570; * &#x4FE1;&#x606F;&#x589E;&#x76CA;
+</code></pre><p>$$
+ g_R(D,A) = \frac {g(D,A)}{H_A(D)} </p>
+<p>$$
+<strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x5176;&#x4E2D;&#x7684;$$H_A(D)$$&#xFF0C;&#x5BF9;&#x4E8E;&#x6837;&#x672C;&#x96C6;&#x5408;$$D$$&#xFF0C;&#x5C06;&#x5F53;&#x524D;&#x7279;&#x5F81;A&#x4F5C;&#x4E3A;&#x968F;&#x673A;&#x53D8;&#x91CF;&#xFF08;&#x53D6;&#x503C;&#x662F;&#x7279;&#x5F81;A&#x7684;&#x5404;&#x4E2A;&#x7279;&#x5F81;&#x503C;&#xFF09;&#xFF0C;&#x6C42;&#x5F97;&#x7684;&#x7ECF;&#x9A8C;&#x71B5;&#x3002;
+&#xFF08;&#x4E4B;&#x524D;&#x662F;&#x628A;&#x96C6;&#x5408;&#x7C7B;&#x522B;&#x4F5C;&#x4E3A;&#x968F;&#x673A;&#x53D8;&#x91CF;&#xFF0C;&#x73B0;&#x5728;&#x628A;&#x67D0;&#x4E2A;&#x7279;&#x5F81;&#x4F5C;&#x4E3A;&#x968F;&#x673A;&#x53D8;&#x91CF;&#xFF0C;&#x6309;&#x7167;&#x6B64;&#x7279;&#x5F81;&#x7684;&#x7279;&#x5F81;&#x53D6;&#x503C;&#x5BF9;&#x96C6;&#x5408;D&#x8FDB;&#x884C;&#x5212;&#x5206;&#xFF0C;&#x8BA1;&#x7B97;&#x71B5;HA(D)&#xFF09;</p>
+<p>$$
+H<em>A(D)=-\sum</em>{i=1}^n\frac{|D_i|}{|D|}log_2\frac{|D_i|}{|D|}</p>
+<p>$$
+<strong>&#x7F3A;&#x70B9;</strong>&#xFF1A;&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x6BD4;&#x504F;&#x5411;&#x53D6;&#x503C;&#x8F83;&#x5C11;&#x7684;&#x7279;&#x5F81;<br><strong>&#x539F;&#x56E0;</strong>&#xFF1A;&#x5F53;&#x7279;&#x5F81;&#x53D6;&#x503C;&#x8F83;&#x5C11;&#x65F6;$$H_A(D)$$&#x7684;&#x503C;&#x8F83;&#x5C0F;&#xFF0C;&#x56E0;&#x6B64;&#x5176;&#x5012;&#x6570;&#x8F83;&#x5927;&#xFF0C;&#x56E0;&#x800C;&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x6BD4;&#x8F83;&#x5927;&#x3002;&#x56E0;&#x800C;&#x504F;&#x5411;&#x53D6;&#x503C;&#x8F83;&#x5C11;&#x7684;&#x7279;&#x5F81;&#x3002;
+<strong>&#x4F7F;&#x7528;&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x6BD4;</strong>&#xFF1A;&#x57FA;&#x4E8E;&#x4EE5;&#x4E0A;&#x7F3A;&#x70B9;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x9009;&#x62E9;&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x7387;&#x6700;&#x5927;&#x7684;&#x7279;&#x5F81;&#xFF0C;&#x800C;&#x662F;&#x5148;&#x5728;&#x5019;&#x9009;&#x7279;&#x5F81;&#x4E2D;&#x627E;&#x51FA;&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x9AD8;&#x4E8E;&#x5E73;&#x5747;&#x6C34;&#x5E73;&#x7684;&#x7279;&#x5F81;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x8FD9;&#x4E9B;&#x7279;&#x5F81;&#x4E2D;&#x518D;&#x9009;&#x62E9;&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x7387;&#x6700;&#x9AD8;&#x7684;&#x7279;&#x5F81;&#x3002;</p>
+<h1 id="&#x57FA;&#x5C3C;&#x6307;&#x6570;">&#x57FA;&#x5C3C;&#x6307;&#x6570;</h1>
+<p>&#x57FA;&#x5C3C;&#x6307;&#x6570;(&#x57FA;&#x5C3C;&#x4E0D;&#x7EAF;&#x5EA6;)&#xFF1A;&#x8868;&#x793A;&#x5728;&#x6837;&#x672C;&#x96C6;&#x5408;&#x4E2D;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x9009;&#x4E2D;&#x7684;&#x6837;&#x672C;&#x88AB;&#x5206;&#x9519;&#x7684;&#x6982;&#x7387;&#x3002;
+<strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x57FA;&#x5C3C;&#x6307;&#x6570;&#x8D8A;&#x5C0F;&#xFF0C;&#x88AB;&#x5206;&#x9519;&#x7684;&#x6982;&#x7387;&#x8D8A;&#x5C0F;&#xFF0C;&#x96C6;&#x5408;&#x7EAF;&#x5EA6;&#x8D8A;&#x9AD8;&#x3002;</p>
+<pre><code> &#x57FA;&#x5C3C;&#x6307;&#x6570;&#xFF08;&#x57FA;&#x5C3C;&#x4E0D;&#x7EAF;&#x5EA6;&#xFF09;= &#x6837;&#x672C;&#x88AB;&#x9009;&#x4E2D;&#x7684;&#x6982;&#x7387; * &#x6837;&#x672C;&#x88AB;&#x5206;&#x9519;&#x7684;&#x6982;&#x7387;
+</code></pre><p>$$
+Gini(p)=\sum<em>{k=1}^{K}p_k(1-p_k)=1-\sum</em>{k=1}^{K}{p_k}^2</p>
+<p>$$     </p>
+<p><strong>&#x8BF4;&#x660E;</strong>:</p>
+<ol>
+<li>pk&#x8868;&#x793A;&#x9009;&#x4E2D;&#x7684;&#x6837;&#x672C;&#x5C5E;&#x4E8E;k&#x7C7B;&#x522B;&#x7684;&#x6982;&#x7387;&#xFF0C;&#x5219;&#x8FD9;&#x4E2A;&#x6837;&#x672C;&#x88AB;&#x5206;&#x9519;&#x7684;&#x6982;&#x7387;&#x662F;(1-pk)</li>
+<li>&#x6837;&#x672C;&#x96C6;&#x5408;&#x4E2D;&#x6709;K&#x4E2A;&#x7C7B;&#x522B;&#xFF0C;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x9009;&#x4E2D;&#x7684;&#x6837;&#x672C;&#x53EF;&#x4EE5;&#x5C5E;&#x4E8E;&#x8FD9;k&#x4E2A;&#x7C7B;&#x522B;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#xFF0C;&#x56E0;&#x800C;&#x5BF9;&#x7C7B;&#x522B;&#x5C31;&#x52A0;&#x548C;</li>
+<li>&#x5F53;&#x4E3A;&#x4E8C;&#x5206;&#x7C7B;&#x662F;
+$$Gini(p) = 2p(1-p) 
+(&#x4EE4;a=p,b=1-p; &#x5219;a+b=1, Gini(p)=2ab = 1 - (a^2 + b^2))
+$$</li>
+</ol>
+<p><strong>&#x6837;&#x672C;&#x96C6;&#x5408;D&#x7684;Gini&#x6307;&#x6570;</strong> &#xFF1A; &#x5047;&#x8BBE;&#x96C6;&#x5408;&#x4E2D;&#x6709;K&#x4E2A;&#x7C7B;&#x522B;&#xFF0C;&#x5219;&#xFF1A;</p>
+<p>$$
+Gini(D) = 1-\sum_{k=1}^{K}(\frac{|C_k|}{|D|})</p>
+<p>$$</p>
+<p>CART&#x662F;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x57FA;&#x4E8E;&#x7279;&#x5F81;A&#x5212;&#x5206;&#x6837;&#x672C;&#x96C6;&#x5408;D&#x4E4B;&#x540E;&#x7684;&#x57FA;&#x5C3C;&#x6307;&#x6570;&#xFF1A;</p>
+<p>$$
+Gini(D,A)=\frac{|D_1|}{|D|}Gini(D_1) + \frac{|D_2|}{|D|}Gini(D_2)</p>
+<p>$$</p>
+<p>&#x53C2;&#x8003;<a href="https://www.cnblogs.com/muzixi/p/6566803.html" target="_blank">&#x51B3;&#x7B56;&#x6811;</a></p>
+<h1 id="&#x76F8;&#x5BF9;&#x71B5;">&#x76F8;&#x5BF9;&#x71B5;</h1>
+<p>relative entropy, &#x4E5F;&#x88AB;&#x79F0;&#x4E3A;KL&#x6563;&#x5EA6;(Kullback-Leibler divergence, KLD),&#x6216;&#x8005;&#x4FE1;&#x606F;&#x6563;&#x5EA6;(information divergence),&#x662F;&#x4E24;&#x4E2A;&#x6982;&#x7387;&#x5206;&#x5E03;&#x95F4;&#x5DEE;&#x5F02;&#x7684;&#x975E;&#x5BF9;&#x79F0;&#x5EA6;&#x91CF;&#x3002;&#x5728;&#x4FE1;&#x606F;&#x8BBA;&#x4E2D;&#xFF0C;&#x76F8;&#x5BF9;&#x71B5;&#x7B49;&#x4EF7;&#x4E8E;&#x4E24;&#x4E2A;&#x6982;&#x7387;&#x5206;&#x5E03;&#x4FE1;&#x606F;&#x71B5;&#x7684;&#x5DEE;&#x503C;&#x3002;</p>
+<p>$$
+KL(P|Q)=\sum_{}P(x)log\frac{P(x)}{Q(x)}</p>
+<p>$$
+&#x5728;&#x4FE1;&#x606F;&#x7406;&#x8BBA;&#x4E2D;&#xFF0C;&#x76F8;&#x5BF9;&#x71B5;&#x662F;&#x7528;&#x6765;&#x5EA6;&#x91CF;&#x4F7F;&#x7528;&#x57FA;&#x4E8E;Q&#x7684;&#x7F16;&#x7801;&#x6765;&#x7F16;&#x7801;&#x6765;&#x81EA;P&#x7684;&#x6837;&#x672C;&#x5E73;&#x5747;&#x6240;&#x9700;&#x7684;&#x989D;&#x5916;&#x7684;&#x6BD4;&#x7279;&#x4E2A;&#x6570;&#x3002;&#x5178;&#x578B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;P&#x8868;&#x793A;&#x6570;&#x636E;&#x7684;&#x771F;&#x5B9E;&#x5206;&#x5E03;&#xFF0C;Q&#x8868;&#x793A;&#x6570;&#x636E;&#x7684;&#x7406;&#x8BBA;&#x5206;&#x5E03;&#xFF0C;&#x6A21;&#x578B;&#x5206;&#x5E03;&#xFF0C;&#x6216;P&#x7684;&#x8FD1;&#x4F3C;&#x5206;&#x5E03;&#x3002;</p>
+<p><strong>&#x6027;&#x8D28;</strong>&#xFF1A;</p>
+<ol>
+<li>&#x975E;&#x8D1F;&#x6027;&#xFF0C;$$KL(P | Q) \geq 0$$&#xFF0C;&#x4E14;&#x5728;$$P \equiv Q$$&#x65F6;&#x53D6;0.</li>
+<li>&#x4E0D;&#x5BF9;&#x79F0;&#x6027;&#xFF0C;$$KL(p, q) \neq KL(q, p)$$</li>
+</ol>
+<h1 id="&#x4EA4;&#x53C9;&#x71B5;">&#x4EA4;&#x53C9;&#x71B5;</h1>
+<p>cross entropy, </p>
+<p>$$
+H(P,Q)=-\sum_{}P(x)logQ(x) \
+KL(P|Q) = H(P,Q) - H(P)</p>
+<p>$$</p>
+<p>&#x5728;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8BC4;&#x4F30;label&#x548C;predicts&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x8DDD;&#xFF0C;&#x4F7F;&#x7528;KL&#x6563;&#x5EA6;&#x521A;&#x521A;&#x597D;&#xFF0C;&#x5373;$$KL_D(y||\hat{y} )$$&#xFF0C;&#x7531;&#x4E8E;KL&#x6563;&#x5EA6;&#x4E2D;&#x7684;&#x540E;&#x4E00;&#x90E8;&#x5206;-H(y)&#x4E0D;&#x53D8;&#xFF0C;&#x6545;&#x5728;&#x4F18;&#x5316;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x4EA4;&#x53C9;&#x71B5;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x6240;&#x4EE5;&#x4E00;&#x822C;&#x5728;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x4E2D;&#x76F4;&#x63A5;&#x7528;&#x7528;&#x4EA4;&#x53C9;&#x71B5;&#x505A;loss&#xFF0C;&#x8BC4;&#x4F30;&#x6A21;&#x578B;&#x3002;</p>
+<p>&#x5728;&#x4E8C;&#x5206;&#x7C7B;(n=2)&#x95EE;&#x9898;&#x4E0A;&#xFF0C;&#x5355;&#x4E2A;&#x6837;&#x672C;&#x7684;loss</p>
+<p>$$
+loss=-\sum<em>{i=1}^{n} y</em>{i} \log (\hat{y}_{i}) \
+loss=ylog(\hat{y}) + (1-y)log(1-\hat{y})</p>
+<p>$$
+&#x5168;&#x90E8;&#x6837;&#x672C;&#x7684;&#x5E73;&#x5747;loss</p>
+<p>$$
+loss=-\frac{1}{m} \sum<em>{j=1}^{m} \sum</em>{i=1}^{n} y<em>{j i} \log \left(\hat{y}</em>{j i}\right) \
+loss=-\frac{1}{m}\sum_{j=1}^{m}(ylog(\hat{y}) + (1-y)log(1-\hat{y})
+)</p>
+<p>$$
+&#x5176;&#x4E2D;&#xFF0C;m&#x4E3A;&#x6837;&#x672C;&#x91CF;
+&#x6C42;&#x4EA4;&#x53C9;&#x71B5;&#x5C31;&#x548C;&#x6C42;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;&#xFF08;&#x5047;&#x8BBE;&#x6837;&#x672C;&#x670D;&#x4ECE;&#x4F2F;&#x52AA;&#x5229;&#x5206;&#x5E03;&#xFF09;&#x4E00;&#x81F4;&#x4E86;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="tu-you-hua.html" class="navigation navigation-prev " aria-label="Previous page: 凸优化">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="jue-ce-shu.html" class="navigation navigation-next " aria-label="Next page: 决策树">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"信息熵","level":"1.5","depth":1,"next":{"title":"决策树","level":"1.6","depth":1,"path":"jue-ce-shu.md","ref":"jue-ce-shu.md","articles":[]},"previous":{"title":"凸优化","level":"1.4","depth":1,"path":"tu-you-hua.md","ref":"tu-you-hua.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"xin-xi-shang.md","mtime":"2019-09-29T09:28:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-29T09:29:26.543Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

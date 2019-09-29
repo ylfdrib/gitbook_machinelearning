@@ -1,0 +1,388 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>lightGBM · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="sun-shi-han-shu.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    线性模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="bayesian.html">
+            
+                <a href="bayesian.html">
+            
+                    
+                    Bayesian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="tu-you-hua.html">
+            
+                <a href="tu-you-hua.html">
+            
+                    
+                    凸优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="xin-xi-shang.html">
+            
+                <a href="xin-xi-shang.html">
+            
+                    
+                    信息熵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="jue-ce-shu.html">
+            
+                <a href="jue-ce-shu.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="zui-you-hua-fang-fa.html">
+            
+                <a href="zui-you-hua-fang-fa.html">
+            
+                    
+                    最优化方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="xgboost.html">
+            
+                <a href="xgboost.html">
+            
+                    
+                    xgboost
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="sun-shi-han-shu.html">
+            
+                <a href="sun-shi-han-shu.html">
+            
+                    
+                    损失函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="lightgbm.html">
+            
+                <a href="lightgbm.html">
+            
+                    
+                    lightGBM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >lightGBM</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lightgbm">lightGBM</h1>
+<p><strong>lightGBM</strong>&#x4E5F;&#x662F;&#x4E00;&#x79CD;GBDT&#x6846;&#x67B6;&#xFF0C;&#x76F8;&#x6BD4;<strong>XGBoost</strong>&#xFF0C;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x4F18;&#x52BF;<br><a href="https://lightgbm.readthedocs.io/en/latest/Features.html" target="_blank">lightGBM vs XGBoost</a><br><a href="https://www.biaodianfu.com/lightgbm.html" target="_blank">&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#x4E4B;LightGBM</a></p>
+<ul>
+<li>&#x8BAD;&#x7EC3;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;&#xFF0C;&#x5360;&#x7528;&#x5185;&#x5B58;&#x66F4;&#x5C0F;<ul>
+<li>&#x6BCF;&#x6B21;&#x5212;&#x5206;&#x8BA1;&#x7B97;&#x589E;&#x76CA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;<ul>
+<li>XGB&#x7528;&#x7684;&#x662F;pre-sort-based &#x65B9;&#x6CD5;&#x5BF9;&#x7279;&#x5F81;&#x503C;&#x6392;&#x5E8F;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(#data)</li>
+<li>lightGBM&#x7528;&#x7684;&#x76F4;&#x65B9;&#x56FE;&#x7B97;&#x6CD5;&#xFF0C;&#x5C06;&#x7279;&#x5F81;&#x503C;&#x5206;&#x6876;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(#bins)</li>
+</ul>
+</li>
+<li>&#x76F4;&#x65B9;&#x56FE;&#x505A;&#x5DEE;&#xFF0C;&#x901F;&#x5EA6;&#x63D0;&#x5347;&#x4E00;&#x500D;<ul>
+<li>&#x5212;&#x5206;&#x5B50;&#x6811;&#x65F6;&#xFF0C;&#x53F3;&#x5B50;&#x6811;&#x76F4;&#x65B9;&#x56FE; = &#x7236;&#x8282;&#x70B9;&#x76F4;&#x65B9;&#x56FE; - &#x5DE6;&#x5B50;&#x6811;&#x76F4;&#x65B9;&#x56FE;</li>
+</ul>
+</li>
+<li>&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x7684;&#x66F4;&#x5C11;<ul>
+<li>&#x76F4;&#x65B9;&#x56FE;&#x7B97;&#x6CD5;&#x5C06;&#x7279;&#x5F81;&#x503C;&#x6620;&#x5C04;&#x6210;&#x6876;&#x7F16;&#x53F7;&#xFF0C;&#x5B58;&#x50A8;&#x6876;&#x7F16;&#x53F7;(&#x4F8B;&#x5982; uint8_t)&#x6BD4;&#x539F;&#x59CB;&#x7279;&#x5F81;&#x503C;(&#x4F8B;&#x5982; float)&#x4F7F;&#x7528;&#x66F4;&#x5C11;&#x7684;&#x5185;&#x5B58;&#x3002;</li>
+<li>&#x4E0D;&#x7528;&#x5B58;&#x50A8;&#x9644;&#x52A0;&#x7684;pre-sorting&#x7279;&#x5F81;&#x503C;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x7A00;&#x758F;&#x4F18;&#x5316;<ul>
+<li>&#x6784;&#x9020;&#x7A00;&#x758F;&#x7279;&#x5F81;&#x7684;&#x76F4;&#x65B9;&#x56FE;&#xFF0C;&#x53EA;&#x9700;&#x8981;O(2 * #non_zero_data)</li>
+</ul>
+</li>
+<li>&#x51C6;&#x786E;&#x7387;&#x63D0;&#x5347;<ul>
+<li>Leaf-wise(Best-first) &#x65B9;&#x5F0F;&#x6811;&#x751F;&#x957F;<ul>
+<li>&#x5927;&#x90E8;&#x5206;&#x51B3;&#x7B56;&#x6811;&#x90FD;&#x662F;&#x6309;level(depth)-wise&#x65B9;&#x5F0F;&#x751F;&#x957F;&#xFF08;&#x6BCF;&#x6B21;&#x53D6;depth&#x6700;&#x5C0F;&#x7684;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5206;&#x88C2;&#xFF09;</li>
+<li>Leaf-wise &#x6BCF;&#x6B21;&#x9009;&#x62E9;&#x6700;&#x5927;&#x7684; delta-loss &#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5206;&#x88C2;&#xFF08;&#x6709;&#x53EF;&#x80FD;&#x8FC7;&#x62DF;&#x5408;&#xFF0C;&#x9700;&#x8981; max_depth &#x914D;&#x5408;&#x9650;&#x5236;&#x6811;&#x6DF1;&#xFF09;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x5BF9;&#x5206;&#x7C7B;&#x7279;&#x5F81;&#x7684;&#x5206;&#x88C2;&#x4F18;&#x5316;<ul>
+<li>&#x4E00;&#x822C;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x7684;&#x662F;one-hot encoding&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x5728;&#x6811;&#x6A21;&#x578B;&#x4E2D;&#x4E0D;&#x662F;&#x6700;&#x597D;&#x7684;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x6811;&#x6DF1;&#x5EA6;&#x975E;&#x5E38;&#x6DF1;</li>
+<li>lightGBM&#x7684;&#x89E3;&#x51B3;&#x601D;&#x8DEF;&#x662F;&#x5C06;&#x7279;&#x5F81;&#x6309;&#x7279;&#x5F81;&#x503C;&#x5212;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x96C6;&#x5408;(&#x4E0D;&#x662F;one-vs-rest&#xFF0C;&#x662F; many-vs-many)&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F;O(k*log(k))<ul>
+<li>&#x5177;&#x4F53;&#x601D;&#x8DEF;&#x662F;&#x5148;&#x6392;&#x5E8F;&#xFF08;key=sum_gradient/sum_hessian&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x4ECE;&#x5DE6;&#x5F80;&#x53F3;&#x67E5;&#x627E;&#x6700;&#x4F18;&#x5212;&#x5206;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x4F18;&#x5316;</li>
+<li>&#x5E76;&#x884C;learning &#x4F18;&#x5316;<ul>
+<li>&#x7279;&#x5F81;&#x5E76;&#x884C;</li>
+<li>&#x6570;&#x636E;&#x5E76;&#x884C;</li>
+<li>voting &#x5E76;&#x884C;</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="sun-shi-han-shu.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 损失函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"lightGBM","level":"1.10","depth":1,"previous":{"title":"损失函数","level":"1.9","depth":1,"path":"sun-shi-han-shu.md","ref":"sun-shi-han-shu.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"lightgbm.md","mtime":"2019-09-29T09:28:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-29T09:29:26.543Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,404 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Bayesian · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="tu-you-hua.html" />
+    
+    
+    <link rel="prev" href="chapter1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    线性模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="bayesian.html">
+            
+                <a href="bayesian.html">
+            
+                    
+                    Bayesian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="tu-you-hua.html">
+            
+                <a href="tu-you-hua.html">
+            
+                    
+                    凸优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="xin-xi-shang.html">
+            
+                <a href="xin-xi-shang.html">
+            
+                    
+                    信息熵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="jue-ce-shu.html">
+            
+                <a href="jue-ce-shu.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="zui-you-hua-fang-fa.html">
+            
+                <a href="zui-you-hua-fang-fa.html">
+            
+                    
+                    最优化方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="xgboost.html">
+            
+                <a href="xgboost.html">
+            
+                    
+                    xgboost
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="sun-shi-han-shu.html">
+            
+                <a href="sun-shi-han-shu.html">
+            
+                    
+                    损失函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="lightgbm.html">
+            
+                <a href="lightgbm.html">
+            
+                    
+                    lightGBM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Bayesian</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="bayesian">Bayesian</h1>
+<h2 id="&#x8D1D;&#x53F6;&#x65AF;&#x5B9A;&#x7406;">&#x8D1D;&#x53F6;&#x65AF;&#x5B9A;&#x7406;</h2>
+<p>$$
+    \mathcal{p(w|D) = \frac{p(D|w)p(w)}{p(D)}}</p>
+<p>$$
+&#x5176;&#x4E2D;&#xFF0C;$$\mathcal{D}={t_1,...,t_N}$$ &#x662F;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#xFF0C;$$\mathcal{p(w|D)}$$ &#x662F;&#x540E;&#x9A8C;&#x6982;&#x7387;&#x3002;&#x53F3;&#x4FA7;$$\mathcal{p(D|w)}$$&#x7531;&#x89C2;&#x6D4B;&#x6570;&#x636E;$$\mathcal{D}$$&#x6765;&#x4F30;&#x8BA1;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x770B;&#x6210;&#x53C2;&#x6570;&#x5411;&#x91CF;$$\mathcal{w}$$&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x88AB;&#x79F0;&#x4E3A;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#xFF08;likelihood funcition&#xFF09;&#x3002;&#x7528;&#x81EA;&#x7136;&#x8BED;&#x8A00;&#x63CF;&#x8FF0;&#x8D1D;&#x53F6;&#x65AF;&#x5B9A;&#x7406;&#xFF1A;</p>
+<p>$$
+    posterior \propto likelihood \times prior</p>
+<p>$$</p>
+<p>&#x8D1D;&#x53F6;&#x65AF;&#x516C;&#x5F0F;&#x7684;&#x5206;&#x6BCD;&#x662F;&#x5F52;&#x4E00;&#x5316;&#x5E38;&#x6570;&#xFF0C;&#x516C;&#x5F0F;&#x4E24;&#x8FB9;&#x5BF9;$$\mathcal{w}$$&#x6C42;&#x79EF;&#x5206;&#xFF0C;&#x6709;</p>
+<p>$$
+    \mathcal{p(D) = \int p(D|w)p(w)\ dw}</p>
+<p>$$</p>
+<h2 id="mle-vs-map-vs-bayesian">MLE vs MAP vs Bayesian</h2>
+<ul>
+<li>Training Data: $$ \mathcal{D = {(x_1, y_1),...,(x_n, y_n)}} $$</li>
+<li>Model parameter: $$ \mathcal{\theta} $$</li>
+<li>New Data: $$ x^* $$</li>
+</ul>
+<h3 id="1-mle-maximum-likelihood-estimation">1. MLE (Maximum Likelihood Estimation)</h3>
+<ul>
+<li><p>Learning: Finding $$\mathcal{\theta^*}$$ such that maximize $$ \mathcal{p(D|\theta)} $$,  </p>
+<p>  &#x5373;$$\theta^*<em>{MLE}=argmax</em>{\theta}\mathcal{p(D|\theta)}$$ &#xFF0C;&#x4E00;&#x822C;&#x7684;&#x6C42;&#x89E3;&#x65B9;&#x6CD5;&#x662F;&#x4EE4; $$\mathcal{\frac{\partial p(D|\theta)}{\partial \theta} = 0}$$.</p>
+</li>
+<li>Prediction: $$ \mathcal{p(\hat y | x^<em>, \theta^</em>)} $$</li>
+<li>&#x7F3A;&#x70B9;<ul>
+<li>&#x7F3A;&#x5C11;&#x5148;&#x9A8C;</li>
+<li>&#x5BB9;&#x6613;&#x8FC7;&#x62DF;&#x5408;</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-map-maximum-a-posteri-estimation">2. MAP (Maximum A Posteri estimation)</h3>
+<ul>
+<li><p>Learning: Finding $$\mathcal{\theta^*}$$ such that maximize $$ \mathcal{p(\theta | D)} $$,  </p>
+<p>  &#x5373;$$\theta^*<em>{MAP} = \mathcal{argmax</em>{\theta}\ p(\theta|D)=argmax<em>{\theta}\ p(D|\theta)p(\theta) = argmax</em>{\theta}\ log\ p(D|\theta) + log\ p(\theta) }$$</p>
+</li>
+</ul>
+<ul>
+<li>Prediction: $$ \mathcal{p(\hat y | x^<em>, \theta^</em>)} $$</li>
+</ul>
+<h3 id="3-bayesian-estimation">3. Bayesian estimation</h3>
+<ul>
+<li>Learning: Computing the posterior $$ \mathcal{p(\theta | D)} $$</li>
+<li>Prediction: $$\mathcal{p(\hat y | x^<em>, D) = \int_\theta p(\hat y | x^</em>, \theta)p(\theta|D)d\theta}$$</li>
+</ul>
+<h3 id="4-&#x533A;&#x522B;">4. &#x533A;&#x522B;</h3>
+<ul>
+<li>MLE,MAP&#x7684;&#x76EE;&#x6807;&#x662F;&#x627E;&#x5230;&quot;&#x7279;&#x5B9A;&quot;&#x7684;&#x6700;&#x4F18;&#x89E3; $$ \theta^* $$&#xFF0C;&#x800C;Bayesian&#x8003;&#x8651;&#x4E86;&#x6240;&#x6709;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5373;&#x53C2;&#x6570; $$\theta$$ &#x7684;&#x6574;&#x4E2A;&#x5206;&#x5E03;&#x3002;</li>
+</ul>
+<h3 id="&#x7EBF;&#x6027;&#x56DE;&#x5F52;">&#x7EBF;&#x6027;&#x56DE;&#x5F52;</h3>
+<p>&#x8F93;&#x51FA;&#x662F;&#x8F93;&#x5165;&#x53D8;&#x91CF;&#x7684;&#x7EBF;&#x6027;&#x7EC4;&#x5408;&#xFF0C;&#x5373;</p>
+<p>$$
+    y(x,w)=w_0 + w_1x_1 + ... + w_Dx_D</p>
+<p>$$</p>
+<h3 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h3>
+<ol>
+<li>&#x674E;&#x6587;&#x54F2;&#x5206;&#x4EAB; <a href="http://www.chinahadoop.cn/course/586/learn#lesson/11556" target="_blank">&#x94FE;&#x63A5;</a></li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter1.html" class="navigation navigation-prev " aria-label="Previous page: 线性模型">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="tu-you-hua.html" class="navigation navigation-next " aria-label="Next page: 凸优化">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Bayesian","level":"1.3","depth":1,"next":{"title":"凸优化","level":"1.4","depth":1,"path":"tu-you-hua.md","ref":"tu-you-hua.md","articles":[]},"previous":{"title":"线性模型","level":"1.2","depth":1,"path":"chapter1.md","ref":"chapter1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"bayesian.md","mtime":"2019-09-29T09:28:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-29T09:29:26.543Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
