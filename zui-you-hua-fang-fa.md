@@ -127,7 +127,7 @@ $$
 $$
 则可写成：
 $$
-\mathbf{y}_{k} \approx H_{k+1} \cdot \mathbf{s}_{k}，或者 \  \mathbf{s}_{k} \approx H_{k+1}^{-1} \cdot \mathbf{y}_{k}
+\mathbf{y}_{k} \approx H_{k+1} \cdot \mathbf{s}_{k},或者 \  \mathbf{s}_{k} \approx H_{k+1}^{-1} \cdot \mathbf{y}_{k}
 $$
 
 这就是所谓的**拟牛顿条件**，它对迭代过程中的海森矩阵$$H_{k+1}$$作约束，因此，对$$H_{k+1}$$作近似的$$B_{k+1}$$，以及对$$H_{k+1}^{-1}$$做近似的$$D_{k+1}$$可以将：
