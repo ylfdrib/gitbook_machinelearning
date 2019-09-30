@@ -1,12 +1,12 @@
-#梯度下降法（Gradient Descent）
+# 梯度下降法（Gradient Descent）
 梯度下降法，属于一阶优化算法，根据每次迭代求解L代入的样本数，可以分为：**全量梯度下降**（一次计算所有样本的损失），**批量梯度下降***(一次计算一个batch样本的损失)和**随机梯度下降**(一次只随机计算一个样本的损失)。
 $$
 \theta_{n} := \theta_{n-1} - \eta L^{\prime}(\theta_{n-1})
 $$
 其中，$$\alpha$$是梯度每次逼近的步长，‘-’负号表示负梯度方向，L是损失函数。
 
-###数学推导
-####一阶泰勒展开式
+### 数学推导
+#### 一阶泰勒展开式
 主要利用的数学思想是，曲线函数的线性拟合近似。
 $$
 f(\theta) \approx f\left(\theta_{0}\right)+\left(\theta-\theta_{0}\right) \cdot \nabla f\left(\theta_{0}\right)
@@ -48,7 +48,7 @@ $$
 #牛顿法（Newton's method）
 迭代公式如下：
 $$
-x_{k+1} = x_{k} - \frac{f^\prime(x_k)}{f^{\prime\prime}(x_k)}，k=0，1
+x_{k+1} = x_{k} - \frac{f^\prime(x_k)}{f^{\prime\prime}(x_k)}, k=0, 1
 $$
 $$
 \mathbf{x}_{k+1}=\mathbf{x}_{k} - \frac{\nabla f(\mathbf{x}_{k})}{\nabla^{2} f(\mathbf{x}_{k})}=\mathbf{x}_{k}-H_{k}^{-1} \cdot \mathbf{g}_{k}
