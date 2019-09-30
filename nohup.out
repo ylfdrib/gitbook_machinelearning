@@ -1,3 +1,12 @@
 [0;36minfo:[0m installing 1 plugins using npm@3.9.2 
 [0;36minfo:[0m  
 [0;36minfo:[0m installing plugin "mathjax-beta" 
+[0;36minfo:[0m install plugin "mathjax-beta" (*) from NPM with version 0.0.0 
+/Users/wei/GitBook/Library/Import/machinelearning
+├── gitbook-plugin-katex@1.1.4 
+├── gitbook-plugin-mathjax@1.1.2 
+└─┬ gitbook-plugin-mathjax-beta@0.0.0 
+  ├── crc@3.3.0 
+  └── q@1.4.1 
+
+[0;36minfo:[0m [0;32m>> [0mplugin "mathjax-beta" installed with success 
