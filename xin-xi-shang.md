@@ -8,11 +8,21 @@ $$
 
 比如：字符串ABBC如果以二进制编码，最小平均编码长度就是
 $$
-length = H(X) \\
-  = -p(A)logp(A) - p(B)logp(B) - p(C)logp(C) \\
-  =-1/4log(1/4) - 1/2log(1/2) - 1/4log(1/4) \\
-  =1.5
+ length = H(X)
 $$
+
+$$
+= -p(A)logp(A) - p(B)logp(B) - p(C)logp(C)
+$$ 
+
+$$
+=-1/4log(1/4) - 1/2log(1/2) - 1/4log(1/4)
+$$
+ 
+$$  
+ =1.5 
+$$
+
 huffman编码：encode(A)=00, encode(B)=1, encode(C)=01，则encode(ABBC)=001101，编码总长度为6，字符串长度为4，平均编码长度为6/4=1.5
 
 
