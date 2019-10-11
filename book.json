@@ -1,5 +1,5 @@
 {
 "plugins": [
-        "katex"
+        "mathjax@https://github.com/ylfdrib/plugin-mathjax"
 ]
 }
