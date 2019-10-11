@@ -266,15 +266,15 @@
                                 
                                 <h1 id="huber-loss-function">Huber Loss function</h1>
 <p>Huber Loss&#x662F;&#x4E3A;&#x4E86;&#x589E;&#x5F3A;&#x5E73;&#x65B9;&#x8BEF;&#x5DEE;&#x635F;&#x5931;&#x51FD;&#x6570;(squared loss function)&#x5BF9;&#x566A;&#x58F0;(&#x6216;&#x8005;&#x53EB;&#x79BB;&#x7FA4;&#x70B9;&#xFF0C;outliers)&#x7684;&#x9C81;&#x68D2;&#x6027;&#x63D0;&#x51FA;&#x7684;&#x3002;</p>
-<p>&#x5B9A;&#x4E49;&#xFF1A;</p>
-<p>$$
-L_{\delta}(a)=\left{\begin{array}{ll}{\frac{1}{2} a^{2},} &amp; {\text { for }|a| \leq \delta} \ {\delta \cdot\left(|a|-\frac{1}{2} \delta\right),} &amp; {\text { otherwise }}\end{array}\right.</p>
-<p>$$
-&#x6CE8;&#xFF1A;&#x5F53;$$|a|\leq\delta$$&#x65F6;&#xFF0C;loss&#x968F;$$a$$&#x5E73;&#x65B9;&#x589E;&#x957F;&#xFF1B;&#x5426;&#x5219;&#xFF0C;&#x7EBF;&#x6027;&#x589E;&#x957F;</p>
-<p>&#x901A;&#x5E38;$$a$$&#x8868;&#x793A;residuals&#xFF0C;&#x4E5F;&#x5373;$$(y-\hat{y})$$&#x6216;&#x8005;$$(y-f(x))$$&#xFF0C;&#x5F53;$$a=y-f(x)$$&#x65F6;&#xFF0C;&#x4E0A;&#x8FF0;&#x5F62;&#x5F0F;&#x53EF;&#x62D3;&#x5C55;&#x4E3A;&#xFF1A;</p>
-<p>$$
-L_{\delta}(y, f(x))=\left{\begin{array}{ll}{\frac{1}{2}(y-f(x))^{2},} &amp; {\text { for }|y-f(x)| \leq \delta} \ {\delta \cdot\left(|y-f(x)|-\frac{1}{2} \delta\right),} &amp; {\text { otherwise }}\end{array}\right.</p>
-<p>$$</p>
+<p>&#x5B9A;&#x4E49;&#xFF1A;
+<script type="math/tex; mode=display">
+L_{\delta}(a)=\left\{\begin{array}{ll}{\frac{1}{2} a^{2},} & {\text { for }|a| \leq \delta} \\ {\delta \cdot\left(|a|-\frac{1}{2} \delta\right),} & {\text { otherwise }}\end{array}\right.
+</script>
+&#x6CE8;&#xFF1A;&#x5F53;<script type="math/tex; ">|a|\leq\delta</script>&#x65F6;&#xFF0C;loss&#x968F;<script type="math/tex; ">a</script>&#x5E73;&#x65B9;&#x589E;&#x957F;&#xFF1B;&#x5426;&#x5219;&#xFF0C;&#x7EBF;&#x6027;&#x589E;&#x957F;</p>
+<p>&#x901A;&#x5E38;<script type="math/tex; ">a</script>&#x8868;&#x793A;residuals&#xFF0C;&#x4E5F;&#x5373;<script type="math/tex; ">(y-\hat{y})</script>&#x6216;&#x8005;<script type="math/tex; ">(y-f(x))</script>&#xFF0C;&#x5F53;<script type="math/tex; ">a=y-f(x)</script>&#x65F6;&#xFF0C;&#x4E0A;&#x8FF0;&#x5F62;&#x5F0F;&#x53EF;&#x62D3;&#x5C55;&#x4E3A;&#xFF1A;
+<script type="math/tex; mode=display">
+L_{\delta}(y, f(x))=\left\{\begin{array}{ll}{\frac{1}{2}(y-f(x))^{2},} & {\text { for }|y-f(x)| \leq \delta} \\ {\delta \cdot\left(|y-f(x)|-\frac{1}{2} \delta\right),} & {\text { otherwise }}\end{array}\right.
+</script></p>
 
                                 
                                 </section>
@@ -318,7 +318,7 @@ L_{\delta}(y, f(x))=\left{\begin{array}{ll}{\frac{1}{2}(y-f(x))^{2},} &amp; {\te
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"损失函数","level":"1.9","depth":1,"next":{"title":"lightGBM","level":"1.10","depth":1,"path":"lightgbm.md","ref":"lightgbm.md","articles":[]},"previous":{"title":"xgboost","level":"1.8","depth":1,"path":"xgboost.md","ref":"xgboost.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"sun-shi-han-shu.md","mtime":"2019-09-29T09:28:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-29T09:29:26.543Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"损失函数","level":"1.9","depth":1,"next":{"title":"lightGBM","level":"1.10","depth":1,"path":"lightgbm.md","ref":"lightgbm.md","articles":[]},"previous":{"title":"xgboost","level":"1.8","depth":1,"path":"xgboost.md","ref":"xgboost.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax@https://github.com/ylfdrib/plugin-mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6.1"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"sun-shi-han-shu.md","mtime":"2019-05-13T06:29:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-11T03:56:13.832Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -326,6 +326,14 @@ L_{\delta}(y, f(x))=\left{\begin{array}{ll}{\frac{1}{2}(y-f(x))^{2},} &amp; {\te
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
