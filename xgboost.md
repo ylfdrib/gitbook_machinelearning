@@ -247,3 +247,6 @@ b. 右叶子节点得分
 c. 原始叶子节点得分   
 d. 新增叶子的正则惩罚项
 
+
+模型解释-shap
+http://sofasofa.io/tutorials/shap_xgboost/
