@@ -10,4 +10,5 @@
 * [xgboost](xgboost.md)
 * [损失函数](sun-shi-han-shu.md)
 * [lightGBM](lightgbm.md)
+* [Louvain](louvain.md)
 
