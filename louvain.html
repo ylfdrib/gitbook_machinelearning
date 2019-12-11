@@ -1,0 +1,390 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Louvain · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="lightgbm.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    线性模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="bayesian.html">
+            
+                <a href="bayesian.html">
+            
+                    
+                    Bayesian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="tu-you-hua.html">
+            
+                <a href="tu-you-hua.html">
+            
+                    
+                    凸优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="xin-xi-shang.html">
+            
+                <a href="xin-xi-shang.html">
+            
+                    
+                    信息熵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="jue-ce-shu.html">
+            
+                <a href="jue-ce-shu.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="zui-you-hua-fang-fa.html">
+            
+                <a href="zui-you-hua-fang-fa.html">
+            
+                    
+                    最优化方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="xgboost.html">
+            
+                <a href="xgboost.html">
+            
+                    
+                    xgboost
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="sun-shi-han-shu.html">
+            
+                <a href="sun-shi-han-shu.html">
+            
+                    
+                    损失函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="lightgbm.html">
+            
+                <a href="lightgbm.html">
+            
+                    
+                    lightGBM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="louvain.html">
+            
+                <a href="louvain.html">
+            
+                    
+                    Louvain
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Louvain</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h1>
+<p>Louvain&#x7B97;&#x6CD5;&#x662F;&#x4E00;&#x79CD;&#x57FA;&#x4E8E;&#x56FE;&#x6570;&#x636E;&#x7684;&#x793E;&#x533A;&#x53D1;&#x73B0;&#x7B97;&#x6CD5;&#x3002;&#x539F;&#x8BBA;&#x6587;<a href="https://arxiv.org/abs/0803.0476" target="_blank">&#x300A;Fast unfolding of communities in large networks&#x300B;</a>&#x3002;</p>
+<h1 id="&#x6A21;&#x5757;&#x5EA6;">&#x6A21;&#x5757;&#x5EA6;</h1>
+<p>&#x6A21;&#x5757;&#x5EA6;&#xFF08;Modularity&#xFF09; &#x662F;&#x793E;&#x533A;&#x53D1;&#x73B0;&#x7C7B;&#x7B97;&#x6CD5;&#x7684;&#x8BC4;&#x4F30;&#x6307;&#x6807;&#xFF0C;&#x7528;&#x6765;&#x8BC4;&#x4F30;&#x53D1;&#x73B0;&#x7684;&#x793E;&#x533A;&#x8D28;&#x91CF;&#x597D;&#x574F;&#x3002;</p>
+<p><strong>&#x5B9A;&#x4E49;&#x5982;&#x4E0B;</strong>&#xFF1A;
+<script type="math/tex; ">Q=\frac{1}{2 m} \sum_{i, j} \left[A_{i j}-\frac{k_{i} k_{j}}{2 m}\right] \delta\left(c_{i}, c_{j}\right)，Q\in(-1, 1)</script>
+<script type="math/tex; ">\text{其中，} \delta(u, v)=\left\{\begin{array}{ll}{1} & {\text { when } \mathbf{u}==\mathbf{v}} \\ {0} & {\text { else }}\end{array}\right.</script></p>
+<p><script type="math/tex; ">A_{i j}</script>&#xFF1A;&#x8868;&#x793A;&#x9876;&#x70B9;<script type="math/tex; ">i</script>&#x548C;&#x9876;&#x70B9;<script type="math/tex; ">j</script>&#x4E4B;&#x95F4;&#x8FB9;&#x7684;&#x6743;&#x91CD;
+<script type="math/tex; ">k_i</script>&#xFF1A;&#x9876;&#x70B9;<script type="math/tex; ">i</script>&#x7684;&#x6240;&#x6709;&#x90BB;&#x63A5;&#x8FB9;&#x7684;&#x6743;&#x91CD;&#x4E4B;&#x548C; <script type="math/tex; ">k_i = {\sum_j}{A_{i j}}</script>
+<script type="math/tex; ">c_i</script>&#xFF1A;&#x8868;&#x793A;&#x9876;&#x70B9;<script type="math/tex; ">i</script>&#x6240;&#x5C5E;&#x7684;&#x793E;&#x533A;
+<script type="math/tex; ">m</script>&#xFF1A;&#x6574;&#x4E2A;&#x56FE;G&#x4E2D;&#x6240;&#x6709;&#x8FB9;&#x6743;&#x91CD;&#x4E4B;&#x548C; <script type="math/tex; ">m=\frac{1}{2}\sum_{ij}A_{ij}</script>&#xFF08;&#x6BCF;&#x6761;&#x8FB9;&#x8BA1;&#x7B97;&#x4E86;&#x4E00;&#x6B21;&#xFF09;</p>
+<p>&#x516C;&#x5F0F;&#x4E2D;&#x53EA;&#x6709;<script type="math/tex; ">i, j</script>&#x5C5E;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x793E;&#x533A;&#x624D;&#x6709;&#x610F;&#x4E49;&#xFF0C;<strong>&#x516C;&#x5F0F;&#x53D8;&#x5F62;</strong>&#xFF1A;</p>
+<p><script type="math/tex; ">\begin{aligned} Q &=\frac{1}{2 m} \sum_{i, j}\left[A_{i, j}-\frac{k_{i} k_{j}}{2 m}\right] \delta\left(c_{i}, c_{j}\right) \\ &= \frac{1}{2 m}\left[\sum_{i, j} A_{i, j}-\frac{\sum_{i} k_{i} \sum_{j} k_{j}}{2 m}\right] \delta\left(c_{i}, c_{j}\right) \\ &=\frac{1}{2 m} \sum_{c}\left[\Sigma_{i n}-\frac{ {\Sigma_{tot} }^{2}}{2 m}\right] \\ &= \sum_{c}\left[\frac{\Sigma_{in}}{2m}  - \left(\frac{\Sigma_{tot}}{2m}\right)^2\right] \end{aligned}</script></p>
+<p><script type="math/tex; ">\Sigma_{in}</script>&#xFF1A;&#x8868;&#x793A;&#x793E;&#x533A;<script type="math/tex; ">c</script>&#x5185;&#x6240;&#x6709;&#x9876;&#x70B9;&#x7684;&#x793E;&#x533A;&#x5185;&#x7684;&#x8FB9;&#x6743;&#x91CD;&#x4E4B;&#x548C;&#xFF08;&#x6BCF;&#x6761;&#x8FB9;&#x8BA1;&#x7B97;&#x4E86;&#x4E24;&#x6B21;&#xFF09;
+<script type="math/tex; ">\Sigma_{tot}</script>&#xFF1A;&#x8868;&#x793A;&#x793E;&#x533A;<script type="math/tex; ">c</script>&#x5185;&#x6240;&#x6709;&#x9876;&#x70B9;&#x7684;&#x90BB;&#x63A5;&#x8FB9;&#x6743;&#x91CD;&#x4E4B;&#x548C;&#xFF08;&#x5305;&#x62EC;&#x793E;&#x533A;&#x5185;&#x7684;&#x90BB;&#x63A5;&#x8FB9;&#x548C;&#x793E;&#x533A;&#x5916;&#x7684;&#x90BB;&#x63A5;&#x8FB9;&#xFF09;
+<script type="math/tex; ">\Sigma_{i}k_i</script>&#xFF1A;<script type="math/tex; ">\Sigma_i k_i = \Sigma_j k_j = \Sigma_{tot}</script></p>
+<h1 id="&#x4F18;&#x5316;&#x76EE;&#x6807;">&#x4F18;&#x5316;&#x76EE;&#x6807;</h1>
+<p>Louvain&#x7B97;&#x6CD5;&#x662F;&#x4EE5;<strong>&#x6A21;&#x5757;&#x5EA6;</strong>&#x4E3A;&#x76F4;&#x63A5;&#x4F18;&#x5316;&#x76EE;&#x6807;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x7684;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4F18;&#x5316;&#x6A21;&#x5757;&#x5EA6;&#x589E;&#x91CF;&#xFF0C;&#x5373;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x9876;&#x70B9;<script type="math/tex; ">i</script>&#x52A0;&#x5165;&#x4E00;&#x4E2A;&#x793E;&#x533A;<script type="math/tex; ">c</script>&#x5E26;&#x6765;&#x7684;&#x6A21;&#x5757;&#x5EA6;&#x589E;&#x91CF;<script type="math/tex; ">\Delta Q</script>&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<p><script type="math/tex; ">\begin{aligned} \Delta Q&=Q_{after} - Q_{before}\\&=\left[\frac{\sum_{i n}+k_{i, i n}}{2 m}-\left(\frac{\sum_{t o t}+k_{i}}{2 m}\right)^{2}\right]-\left[\frac{\sum_{i n}}{2 m}-\left(\frac{\sum_{t o t}}{2 m}\right)^{2}-\left(\frac{k_{i}}{2 m}\right)^{2}\right] \\&=\frac{k_{i, i n}}{2 m}-\frac{\sum_{t o t} k_{i}}{2 m^{2}} \end{aligned}</script></p>
+<p><script type="math/tex; ">k_{i,in}</script>&#xFF1A;&#x8868;&#x793A;&#x9876;&#x70B9;<script type="math/tex; ">i</script>&#x4E0E;&#x793E;&#x533A;<script type="math/tex; ">c</script>&#x7684;&#x8FDE;&#x63A5;&#x8FB9;&#x6743;&#x91CD;&#xFF08;&#x6BCF;&#x6761;&#x8FB9;&#x8BA1;&#x7B97;&#x4E86;&#x4E24;&#x6B21;&#xFF09;
+<script type="math/tex; ">k_i</script>&#xFF1A;&#x8868;&#x793A;&#x9876;&#x70B9;<script type="math/tex; ">i</script>&#x7684;&#x6240;&#x6709;&#x90BB;&#x63A5;&#x8FB9;&#x7684;&#x6743;&#x91CD;&#x4E4B;&#x548C; <script type="math/tex; ">k_i = {\sum_j}{A_{i j}}</script>
+<script type="math/tex; ">\Sigma_{tot}</script>&#xFF1A;&#x8868;&#x793A;&#x8981;&#x793E;&#x533A;<script type="math/tex; ">c</script>&#x5185;&#x6240;&#x6709;&#x9876;&#x70B9;&#x7684;&#x90BB;&#x63A5;&#x8FB9;&#x6743;&#x91CD;&#x4E4B;&#x548C;&#xFF08;&#x5305;&#x62EC;&#x793E;&#x533A;&#x5185;&#x7684;&#x90BB;&#x63A5;&#x8FB9;&#x548C;&#x793E;&#x533A;&#x5916;&#x7684;&#x90BB;&#x63A5;&#x8FB9;&#xFF09;</p>
+<p>&#x5B9E;&#x9645;&#x8BA1;&#x7B97;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x5E38;&#x91CF;<script type="math/tex; ">\frac{1}{2m}</script>&#x63D0;&#x51FA;&#x6765;&#xFF0C;&#x53EA;&#x8BA1;&#x7B97; <script type="math/tex; ">k_{i,in} - \frac{\sum_{tot}k_i}{m}</script></p>
+<h1 id="&#x7B97;&#x6CD5;&#x57FA;&#x672C;&#x6D41;&#x7A0B;">&#x7B97;&#x6CD5;&#x57FA;&#x672C;&#x6D41;&#x7A0B;</h1>
+<p>Louvain&#x7B97;&#x6CD5;&#x5305;&#x62EC;&#x4E24;&#x4E2A;&#x9636;&#x6BB5;&#xFF0C;&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x662F;&#x4E24;&#x4E2A;&#x9636;&#x6BB5;&#x7684;&#x4E0D;&#x65AD;&#x8FED;&#x4EE3;&#x3002;</p>
+<p><strong>&#x9636;&#x6BB5;&#x4E00;</strong>&#xFF1A;&#x793E;&#x533A;&#x5212;&#x5206;&#xFF0C;&#x4E0D;&#x65AD;&#x904D;&#x5386;&#x56FE;&#x4E2D;&#x6240;&#x6709;&#x8282;&#x70B9;&#xFF0C;&#x4F9D;&#x6B21;&#x5224;&#x65AD;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7ED9;&#x5B83;&#x7684;&#x90BB;&#x5C45;&#x793E;&#x533A;&#x5E26;&#x6765;&#x7684;&#x6A21;&#x5757;&#x5EA6;&#x589E;&#x91CF;&#xFF0C;&#x9009;&#x589E;&#x91CF;&#x6700;&#x5927;&#x7684;&#x793E;&#x533A;&#xFF08;<script type="math/tex; ">\Delta Q > 0</script>&#xFF09;&#x52A0;&#x5165;&#xFF0C;&#x76F4;&#x81F3;&#x4E00;&#x6B21;&#x904D;&#x5386;&#x4E2D;&#x6CA1;&#x6709;&#x793E;&#x533A;&#x53D8;&#x5316;&#x3002;&#xFF08;&#x4E3A;&#x4E86;&#x4F7F;&#x5F97;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x662F;&#x72EC;&#x7ACB;&#x9876;&#x70B9;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x628A;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x4ECE;&#x6240;&#x5728;&#x793E;&#x533A;&#x5220;&#x9664;&#xFF0C;&#x8BA1;&#x7B97;&#x6A21;&#x5757;&#x5EA6;&#x51CF;&#x91CF;&#x52A0;&#x5165;&#x5230;&#x6A21;&#x5757;&#x5EA6;&#x589E;&#x91CF;&#x7684;&#x8BA1;&#x7B97;&#x4E2D;&#xFF09;</p>
+<p><strong>&#x9636;&#x6BB5;&#x4E8C;</strong>&#xFF1A;&#x793E;&#x533A;&#x6298;&#x53E0;&#xFF0C;&#x5BF9;&#x7B2C;&#x4E00;&#x9636;&#x6BB5;&#x7684;&#x793E;&#x533A;&#x8FDB;&#x884C;&#x6298;&#x53E0;&#xFF0C;&#x5C06;&#x6BCF;&#x4E2A;&#x793E;&#x533A;&#x5408;&#x5E76;&#x6210;&#x8D85;&#x7EA7;&#x8282;&#x70B9;&#x91CD;&#x65B0;&#x6784;&#x56FE;&#xFF0C;&#x4E24;&#x4E2A;&#x8D85;&#x7EA7;&#x8282;&#x70B9;&#x7684;&#x8FB9;&#x6743;&#x662F;&#x4E4B;&#x524D;&#x793E;&#x533A;&#x7684;&#x6240;&#x6709;&#x90BB;&#x63A5;&#x8FB9;&#x6743;&#x4E4B;&#x548C;&#xFF0C;&#x8D85;&#x7EA7;&#x8282;&#x70B9;&#x589E;&#x52A0;&#x81EA;&#x8FDE;&#x8FB9;&#xFF0C;&#x6743;&#x91CD;&#x662F;&#x4E4B;&#x524D;&#x793E;&#x533A;&#x5185;&#x6240;&#x6709;&#x8FB9;&#x6743;&#x4E4B;&#x548C;&#x7684;&#x4E24;&#x500D;<script type="math/tex; ">\Sigma_{in}</script>&#x3002;</p>
+<p>&#x6574;&#x4E2A;Louvain&#x7B97;&#x6CD5;&#x5C31;&#x662F;&#x4E0D;&#x65AD;&#x8FED;&#x4EE3;&#x4E24;&#x4E2A;&#x9636;&#x6BB5;&#xFF0C;&#x76F4;&#x81F3;&#x7B97;&#x6CD5;&#x7A33;&#x5B9A;(&#x56FE;&#x7684;&#x6A21;&#x5757;&#x5EA6;&#x4E0D;&#x518D;&#x53D8;&#x5316;)&#xFF0C;&#x6216;&#x8005;&#x8FBE;&#x5230;&#x6700;&#x5927;&#x8FED;&#x4EE3;&#x6B21;&#x6570;&#x3002;</p>
+<p><a href="https://github.com/taynaud/python-louvain" target="_blank">Louvain&#x6E90;&#x7801;&#x5B9E;&#x73B0;&#x53C2;&#x8003;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lightgbm.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: lightGBM">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Louvain","level":"1.11","depth":1,"previous":{"title":"lightGBM","level":"1.10","depth":1,"path":"lightgbm.md","ref":"lightgbm.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax@https://github.com/ylfdrib/plugin-mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6.1"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"louvain.md","mtime":"2019-12-11T08:51:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-11T08:51:50.122Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
