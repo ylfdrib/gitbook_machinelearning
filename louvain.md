@@ -11,7 +11,7 @@ $$Q=\frac{1}{2 m} \sum_{i, j} \left[A_{i j}-\frac{k_{i} k_{j}}{2 m}\right] \delt
 $$\text{其中，} \delta(u, v)=\left\{\begin{array}{ll}{1} & {\text { when } \mathbf{u}==\mathbf{v}} \\ {0} & {\text { else }}\end{array}\right.$$
 
 $$A_{i j}$$：表示顶点$$i$$和顶点$$j$$之间边的权重   
-$$k_i$$：顶点$$i$$的所有邻接边的权重之和 $$k_i = {\sum_j}{A_{i j}}$$ 
+$$k_i$$：顶点$$i$$的所有邻接边的权重之和 $$k_i = {\sum_j}{A_{i j}}$$  
 $$c_i$$：表示顶点$$i$$所属的社区 
 $$m$$：整个图G中所有边权重之和 $$m=\frac{1}{2}\sum_{ij}A_{ij}$$（每条边计算了一次）
 
