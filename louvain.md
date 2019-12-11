@@ -14,7 +14,7 @@ $$m$$：整个图G中所有边权重之和 $$m=\frac{1}{2}\sum_{ij}A_{ij}$$（�
 
 公式中只有$$i, j$$属于同一个社区才有意义，**公式变形**：
 
-$$\begin{aligned} Q &=\frac{1}{2 m} \sum_{i, j}\left[A_{i, j}-\frac{k_{i} k_{j}}{2 m}\right] \delta\left(c_{i}, c_{j}\right) \\ &= \frac{1}{2 m}\left[\sum_{i, j} A_{i, j}-\frac{\sum_{i} k_{i} \sum_{j} k_{j}}{2 m}\right] \delta\left(c_{i}, c_{j}\right) \\ &=\frac{1}{2 m} \sum_{c}\left[\Sigma_{i n}-\frac{{\Sigma_{tot}}^{2}}{2 m}\right] \\ &= \sum_{c}\left[\frac{\Sigma_{in}}{2m}  - \left(\frac{\Sigma_{tot}}{2m}\right)^2\right] \end{aligned}$$
+$$\begin{aligned} Q &=\frac{1}{2 m} \sum_{i, j}\left[A_{i, j}-\frac{k_{i} k_{j}}{2 m}\right] \delta\left(c_{i}, c_{j}\right) \\ &= \frac{1}{2 m}\left[\sum_{i, j} A_{i, j}-\frac{\sum_{i} k_{i} \sum_{j} k_{j}}{2 m}\right] \delta\left(c_{i}, c_{j}\right) \\ &=\frac{1}{2 m} \sum_{c}\left[\Sigma_{i n}-\frac{ {\Sigma_{tot} }^{2}}{2 m}\right] \\ &= \sum_{c}\left[\frac{\Sigma_{in}}{2m}  - \left(\frac{\Sigma_{tot}}{2m}\right)^2\right] \end{aligned}$$
 
 $$\Sigma_{in}$$：表示社区$$c$$内所有顶点的社区内的边权重之和（每条边计算了两次）
 $$\Sigma_{tot}$$：表示社区$$c$$内所有顶点的邻接边权重之和（包括社区内的邻接边和社区外的邻接边）
